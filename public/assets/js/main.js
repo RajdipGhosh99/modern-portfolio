@@ -182,20 +182,20 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
- 
-var butt=document.getElementById('sendmessage')
-var _name=document.getElementById("namee")
-var _subject=document.getElementById("subject")
-var _message=document.getElementById("message")
 
-butt.addEventListener('click',()=>{
+var butt = document.getElementById('sendmessage')
+var _name = document.getElementById("namee")
+var _subject = document.getElementById("subject")
+var _message = document.getElementById("message")
+
+butt.addEventListener('click', () => {
   // console.log("button clicked",_name.value,_subject.value,_message.value);
 
-  var intro=`Hello Rajdip, I hope this email finds you well.${_name.value?`My name is ${_name.value}, and`:""} I am reaching out from the Z Organization. While conducting research online, I came across your impressive work and wanted to connect with you.\n\n`
+  var intro = `Hello Rajdip, I hope this email finds you well.${_name.value ? `My name is ${_name.value}, and` : ""} I am reaching out from the Z Organization. While conducting research online, I came across your impressive work and wanted to connect with you.\n\n`
 
- var mailtoLink = `mailto:raazdeepghosh@gmail.com?subject=${_subject.value}&body=${ intro+ _message.value}`;
-//  console.log(mailtoLink);
+  var mailtoLink = `mailto:raazdeepghosh+portfolio@gmail.com?subject=${_subject.value}&body=${intro + _message.value}`;
+  //  console.log(mailtoLink);
 
-  window.open(mailtoLink) 
+  window.open(mailtoLink)
 
 })
