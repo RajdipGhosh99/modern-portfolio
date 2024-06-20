@@ -365,7 +365,7 @@ header {
 }
 
 .home__blob-img {
-  width: 159px;
+  width: 156px;
 }
 
 .home__data {
@@ -585,6 +585,14 @@ strong {
 }
 
 .qualification__subtitle {
+  display: inline-block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+  color: var(--first-color);
+  ;
+}
+
+.company__subtitle {
   display: inline-block;
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-1);
