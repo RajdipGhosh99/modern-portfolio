@@ -11,6 +11,10 @@ if (navToggle) {
   });
 }
 
+document.addEventListener('contextmenu', function (event) {
+  event.preventDefault();
+});
+
 /*===== MENU HIDDEN =====*/
 /* Validate if constant exists */
 if (navClose) {
