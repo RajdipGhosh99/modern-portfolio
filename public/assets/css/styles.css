@@ -805,7 +805,7 @@ strong {
 
 .project__bg {
   background-color: var(--first-color-second);
-  padding-top: 3rem;
+  padding-block: 3rem;
 }
 
 .project__title {
