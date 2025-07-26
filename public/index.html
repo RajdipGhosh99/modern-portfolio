@@ -40,6 +40,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
   <!-- ====================PWA================== -->
@@ -178,7 +181,7 @@
             <h1 class="home__title">Hi, I am Rajdip Ghosh</h1>
             <h3 class="home__subtitle">Software Development Engineer</h3>
             <p class="home__description">
-              Experienced software engineer with over <strong>3+</strong> years of hands-on experience in both
+              Experienced software engineer with over <strong>4+</strong> years of hands-on experience in both
               <strong>product</strong> and <strong>service</strong>-based
               environments, as well as <strong>startups</strong>. Skilled in writing clean, reusable, and scalable code
               using <strong>Angular,
@@ -214,7 +217,7 @@
 
       <div class="about__data">
         <p class="about__description">
-          With over 3 years of experience as a software engineer, I have consistently enhanced my skills and knowledge
+          With over 4 years of experience as a software engineer, I have consistently enhanced my skills and knowledge
           daily. My substantial exposure to various technologies enables me to explore innovative tech solutions to
           drive organizational growth. I excel both as an individual contributor and a team player, with strong
           analytical, comprehension, and presentation skills, making me well-suited for challenging technology-related
@@ -259,13 +262,14 @@
     <span class="section__subtitle">My tech stack</span>
     <div class="skills__container container grid">
       <div class="skills__container-box">
-        <img draggable="false" class="skills__container-img" src="./assets/img/skills/angular.svg" alt="angular" />
-        <div class="skills__container-name">Angular</div>
+        <img draggable="false" class="skills__container-img" src="./assets/img/skills/typescript.svg"
+          alt="typescript" />
+        <div class="skills__container-name">TypeScript</div>
       </div>
 
       <div class="skills__container-box">
-        <img draggable="false" class="skills__container-img" src="./assets/img/skills/mongodb.svg" alt="mongodb" />
-        <div class="skills__container-name">MongoDB</div>
+        <img draggable="false" class="skills__container-img" src="./assets/img/skills/angular.svg" alt="angular" />
+        <div class="skills__container-name">Angular</div>
       </div>
 
       <div class="skills__container-box">
@@ -274,7 +278,27 @@
       </div>
 
       <div class="skills__container-box">
-        <img draggable="false" class="skills__container-img" src="./assets/img/skills/nodejs.svg" alt="vue" />
+        <img draggable="false" class="skills__container-img" src="./assets/img/skills/javascript.svg"
+          alt="javascript" />
+        <div class="skills__container-name">JavaScript</div>
+      </div>
+      <div class="skills__container-box">
+        <img draggable="false" class="skills__container-img" src="./assets/img/skills/html.svg" alt="html" />
+        <div class="skills__container-name">HTML</div>
+      </div>
+
+      <div class="skills__container-box">
+        <img draggable="false" class="skills__container-img" src="./assets/img/skills/css.svg" alt="css" />
+        <div class="skills__container-name">CSS</div>
+      </div>
+
+      <div class="skills__container-box">
+        <img draggable="false" class="skills__container-img" src="./assets/img/skills/mongodb.svg" alt="mongodb" />
+        <div class="skills__container-name">MongoDB</div>
+      </div>
+
+      <div class="skills__container-box">
+        <img draggable="false" class="skills__container-img" src="./assets/img/skills/nodejs.svg" alt="nodejs" />
         <div class="skills__container-name">NodeJs</div>
       </div>
 
@@ -292,28 +316,6 @@
       <div class="skills__container-box">
         <img draggable="false" class="skills__container-img" src="./assets/img/skills/redux.svg" alt="redux" />
         <div class="skills__container-name">Redux</div>
-      </div>
-
-      <div class="skills__container-box">
-        <img draggable="false" class="skills__container-img" src="./assets/img/skills/typescript.svg"
-          alt="typescript" />
-        <div class="skills__container-name">TypeScript</div>
-      </div>
-
-      <div class="skills__container-box">
-        <img draggable="false" class="skills__container-img" src="./assets/img/skills/javascript.svg"
-          alt="javascript" />
-        <div class="skills__container-name">JavaScript</div>
-      </div>
-
-      <div class="skills__container-box">
-        <img draggable="false" class="skills__container-img" src="./assets/img/skills/html.svg" alt="html" />
-        <div class="skills__container-name">HTML</div>
-      </div>
-
-      <div class="skills__container-box">
-        <img draggable="false" class="skills__container-img" src="./assets/img/skills/css.svg" alt="css" />
-        <div class="skills__container-name">CSS</div>
       </div>
 
       <div class="skills__container-box">
@@ -763,7 +765,8 @@
   <!--==================== SCROLL TOP ====================-->
 
   <a href="#" class="scrollup" id="scroll-up">
-    <i class="uil uil-arrow-up scrollup__icon"></i>
+    <i class="fa-solid fa-calendar scrollup__icon" d ata-cal-link="rajdipghosh/15min" data-cal-namespace="15min"
+      data-cal-config='{"layout":"month_view"}'></i>
   </a>
 
   <!--==================== SWIPER JS ====================-->
@@ -790,25 +793,40 @@
   </script>
 
 
-  <script  type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Rajdip Ghosh",
-  "jobTitle": "Angular Developer & MEAN Stack Developer",
-  "url": "https://rajdipghosh.vercel.app/",
-  "image": "./assets/img/rajdip-22.jpeg",
-  "sameAs": [
-    "https://www.linkedin.com/in/your-linkedin-profile",
-    "https://twitter.com/YourTwitterHandle"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Bengaluru",
-    "addressCountry": "India"
-  }
-}
-</script>
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rajdip Ghosh",
+        "jobTitle": "Angular Developer & MEAN Stack Developer",
+        "url": "https://rajdipghosh.vercel.app/",
+        "image": "./assets/img/rajdip-22.jpeg",
+        "sameAs": [
+          "https://www.linkedin.com/in/rajdipghosh",
+          "https://x.com/raazdeepghosh"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bengaluru",
+          "addressCountry": "India"
+        }
+      }
+  </script>
+
+  <!-- Cal element-click embed code begins -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "15min", { origin: "https://app.cal.com" });
+
+
+    // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
+    // `data-cal-link="rajdipghosh/15min"`
+    // data-cal-namespace="15min"
+    // `data-cal-config='{"layout":"month_view"}'`
+
+    Cal.ns["15min"]("ui", { "cssVarsPerTheme": { "light": { "cal-brand": "#6e57e0" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+  </script>
+  <!-- Cal element-click embed code ends -->
 
 
   <!-- =====================REGISTER SERVICE WORKER================ -->
