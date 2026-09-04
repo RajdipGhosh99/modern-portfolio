@@ -4,6 +4,19 @@
 .project-thumb-wrapper {
   height: 185px;
   background: var(--bg-surface);
+
+  picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .project-desc {

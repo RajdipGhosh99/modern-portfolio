@@ -5,7 +5,7 @@
  * - Stale-while-revalidate for static scripts, styles, and assets
  */
 
-const CACHE_NAME = 'rajdip-portfolio-v3';
+const CACHE_NAME = 'rajdip-portfolio-v4';
 
 const PRECACHE_ASSETS = [
   '/',
