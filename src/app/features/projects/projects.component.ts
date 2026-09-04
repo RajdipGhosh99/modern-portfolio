@@ -54,15 +54,27 @@ export class ProjectsComponent {
 
   handleImageError(event: Event, project: Project): void {
     const img = event.target as HTMLImageElement;
-    if (img) {
+    if (!img) return;
+
+    const retryCount = Number(img.dataset['retryCount'] || '0');
+    if (retryCount === 0) {
+      img.dataset['retryCount'] = '1';
       const picture = img.closest('picture');
       if (picture) {
-        const sources = picture.querySelectorAll('source');
-        sources.forEach(s => s.remove());
+        picture.querySelectorAll('source').forEach(s => s.remove());
       }
-      if (!img.dataset['retried']) {
-        img.dataset['retried'] = 'true';
-        img.src = this.getPngUrl(project.imageUrl);
+      img.removeAttribute('srcset');
+      // Force direct load of the PNG fallback
+      img.src = this.getPngUrl(project.imageUrl) + '?fallback=1';
+    } else {
+      // Graceful fallback to avoid broken image frame
+      img.style.display = 'none';
+      const wrapper = img.closest('.project-thumb-wrapper');
+      if (wrapper && !wrapper.querySelector('.project-img-fallback')) {
+        const fallback = document.createElement('div');
+        fallback.className = 'w-100 h-100 d-flex flex-column align-items-center justify-content-center text-secondary project-img-fallback';
+        fallback.innerHTML = `<i class="uil uil-presentation-lines fs-1 mb-1" style="color: var(--apple-blue)"></i><span class="fs-8 text-muted">${project.title}</span>`;
+        wrapper.appendChild(fallback);
       }
     }
   }

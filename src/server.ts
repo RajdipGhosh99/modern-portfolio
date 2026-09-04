@@ -12,6 +12,11 @@ const indexHtmlPath = resolve(serverDistFolder, 'index.server.html');
 
 const app = express();
 
+// Register AVIF MIME type for express.static
+try {
+  (express.static as any).mime?.define?.({ 'image/avif': ['avif'] });
+} catch {}
+
 // High-performance gzip / deflate compression middleware
 app.use(compression());
 
@@ -22,6 +27,9 @@ app.use(
   express.static(browserDistFolder, {
     maxAge: '1y',
     setHeaders: (res, path) => {
+      if (path.endsWith('.avif')) {
+        res.setHeader('Content-Type', 'image/avif');
+      }
       if (path.endsWith('.ico') || path.includes('favicon') || path.includes('apple-touch-icon') || path.endsWith('.svg')) {
         res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
       }
