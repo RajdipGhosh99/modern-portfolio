@@ -26,7 +26,9 @@
     "@angular/platform-server": "^19.1.0",
     "@angular/router": "^19.1.0",
     "@angular/ssr": "^19.1.0",
+    "@iconscout/unicons": "^4.2.0",
     "bootstrap": "^5.3.8",
+    "compression": "^1.8.1",
     "express": "^4.21.2",
     "rxjs": "~7.8.1",
     "tslib": "^2.8.1"
@@ -35,6 +37,7 @@
     "@angular/build": "^19.1.0",
     "@angular/cli": "^19.1.0",
     "@angular/compiler-cli": "^19.1.0",
+    "@types/compression": "^1.8.1",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.5",
     "sass": "^1.83.0",

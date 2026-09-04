@@ -1,5 +1,6 @@
 import { renderApplication } from '@angular/platform-server';
 import express from 'express';
+import compression from 'compression';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readFile } from 'node:fs/promises';
@@ -10,6 +11,9 @@ const browserDistFolder = resolve(serverDistFolder, '../browser');
 const indexHtmlPath = resolve(serverDistFolder, 'index.server.html');
 
 const app = express();
+
+// High-performance gzip / deflate compression middleware
+app.use(compression());
 
 /**
  * Serve static assets

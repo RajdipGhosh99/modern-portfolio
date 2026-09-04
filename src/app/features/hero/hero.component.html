@@ -78,16 +78,20 @@
           <div class="apple-frame-halo"></div>
           
           <div class="apple-portrait-container overflow-hidden position-relative">
-            <img 
-              [src]="profile.avatarUrl" 
-              [alt]="profile.fullName" 
-              class="avatar-img w-100 h-100 object-fit-cover" 
-              width="270" 
-              height="270" 
-              fetchpriority="high"
-              draggable="false"
-              oncontextmenu="return false;"
-              ondragstart="return false;" />
+            <picture>
+              <source srcset="assets/img/rajdip-avatar.avif" type="image/avif" />
+              <img 
+                [src]="profile.avatarUrl" 
+                [alt]="profile.fullName" 
+                class="avatar-img w-100 h-100 object-fit-cover" 
+                width="270" 
+                height="270" 
+                fetchpriority="high"
+                decoding="async"
+                draggable="false"
+                oncontextmenu="return false;"
+                ondragstart="return false;" />
+            </picture>
           </div>
 
           <!-- Apple Silicon Floating Feature Pills -->

@@ -43,9 +43,36 @@ export class HeroComponent implements OnInit, OnDestroy {
           calLink: 'rajdipghosh/call',
           config: { layout: 'month_view', useSlotsViewOnSmallScreen: true }
         });
-      } else {
-        window.open('https://cal.com/rajdipghosh/call', '_blank');
+        return;
       }
+
+      // Dynamically load Cal embed on user click to avoid initial third-party cookies
+      const script = document.createElement('script');
+      script.src = 'https://app.cal.com/embed/embed.js';
+      script.onload = () => {
+        // @ts-ignore
+        const Cal = (window as any).Cal;
+        if (Cal) {
+          Cal('init', 'call', { origin: 'https://app.cal.com' });
+          Cal.config = Cal.config || {};
+          Cal.config.forwardQueryParams = true;
+          Cal.ns.call('ui', {
+            cssVarsPerTheme: { dark: { 'cal-brand': '#2997ff' }, light: { 'cal-brand': '#0071e3' } },
+            hideEventTypeDetails: false,
+            layout: 'month_view'
+          });
+          Cal.ns.call('openModal', {
+            calLink: 'rajdipghosh/call',
+            config: { layout: 'month_view', useSlotsViewOnSmallScreen: true }
+          });
+        } else {
+          window.open('https://cal.com/rajdipghosh/call', '_blank');
+        }
+      };
+      script.onerror = () => {
+        window.open('https://cal.com/rajdipghosh/call', '_blank');
+      };
+      document.head.appendChild(script);
     }
   }
 }

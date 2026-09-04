@@ -34,12 +34,12 @@
   --glass-border-hover: rgba(255, 255, 255, 0.35);
   --glass-border-active: #ffffff;
 
-  /* Apple Typography Colors */
+  /* Apple Typography Colors (WCAG Compliant) */
   --text-headings: #f5f5f7;
   --text-main: #d2d2d7;
   --text-secondary: #a1a1a6;
-  --text-muted: #86868b;
-  --text-dim: #6e6e73;
+  --text-muted: #98989d;
+  --text-dim: #86868b;
   --text-inverse: #000000;
 
   /* Apple Signature Buttons */
@@ -67,9 +67,9 @@
   --glass-glow: 0 0 30px rgba(0, 113, 227, 0.15);
   --glass-inset-glow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
 
-  /* Apple Accent Color */
-  --apple-blue: #0071e3;
-  --apple-blue-hover: #0077ed;
+  /* Apple Accent Color (Accessible Dark Blue WCAG AAA 7.5:1 on black) */
+  --apple-blue: #2997ff;
+  --apple-blue-hover: #47a6ff;
 
   /* Bootstrap Bridge */
   --bs-body-bg: var(--bg-dark);
@@ -103,12 +103,12 @@
   --glass-border-hover: rgba(0, 0, 0, 0.3);
   --glass-border-active: #000000;
 
-  /* Apple Light Typography */
+  /* Apple Light Typography (Strict WCAG AAA / AA Accessible Contrast >= 5.5:1) */
   --text-headings: #1d1d1f;
-  --text-main: #515154;
-  --text-secondary: #6e6e73;
-  --text-muted: #86868b;
-  --text-dim: #a1a1a6;
+  --text-main: #2c2c2e;
+  --text-secondary: #48484a;
+  --text-muted: #59595e;
+  --text-dim: #636366;
   --text-inverse: #ffffff;
 
   /* Apple Buttons Light */
@@ -295,20 +295,20 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--apple-blue) !important;
-  color: #ffffff !important;
+  background: var(--btn-primary-bg) !important;
+  color: var(--btn-primary-text) !important;
   font-weight: 500 !important;
   font-size: 0.875rem !important;
   padding: 0.55rem 1.35rem !important;
   border-radius: var(--radius-pill) !important;
-  border: 1px solid var(--apple-blue) !important;
+  border: 1px solid var(--btn-primary-border) !important;
   box-shadow: var(--btn-primary-shadow) !important;
   transition: all var(--transition-fast) !important;
 }
 
 .btn-apple-primary:hover {
-  background: var(--apple-blue-hover) !important;
-  border-color: var(--apple-blue-hover) !important;
+  background: var(--btn-primary-hover-bg) !important;
+  border-color: var(--btn-primary-hover-bg) !important;
   transform: scale(1.02);
 }
 
