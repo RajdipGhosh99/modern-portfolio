@@ -1,0 +1,262 @@
+<section id="hero" class="hero-section">
+  <div class="container">
+    
+    <!-- Hero Main Keynote Grid -->
+    <div class="row align-items-center g-4 mb-4">
+      
+      <!-- Left Column: Keynote Headline & Actions -->
+      <div class="col-lg-7 col-12">
+        
+        <!-- Apple Status Pill -->
+        <div class="apple-status-pill mb-3">
+          <span class="apple-status-dot"></span>
+          <span>{{ profile.status }}</span>
+        </div>
+
+        <!-- Apple Eyebrow -->
+        <span class="apple-eyebrow d-block">Senior Software Engineer &amp; Enterprise Systems Architect</span>
+
+        <!-- Apple Hero Headline -->
+        <h1 class="hero-headline mb-3">
+          <span class="gradient-text">{{ profile.fullName }}</span>
+          <span class="d-block hero-subheadline gradient-text-accent mt-1">
+            {{ currentRole() }}
+          </span>
+        </h1>
+
+        <!-- Narrative Tagline -->
+        <p class="hero-narrative mb-4">
+          5 years engineering high-concurrency enterprise web platforms, AG Grid financial ledgers, and resilient Node.js APIs across <strong class="text-headings">Morgan Stanley</strong> and <strong class="text-headings">DS Smith</strong> using <strong class="text-headings">Angular (v6-20), Nx, and TypeScript</strong>.
+        </p>
+
+        <!-- Apple Action CTAs -->
+        <div class="d-flex flex-wrap align-items-center gap-3 mb-4 hero-cta-group">
+          <a href="#projects" class="btn-apple-primary">
+            <span>Explore Work</span>
+            <i class="uil uil-arrow-right"></i>
+          </a>
+
+          <a [href]="profile.resumeDriveUrl" target="_blank" rel="noopener noreferrer" class="btn-apple-secondary">
+            <i class="uil uil-file-download-alt"></i>
+            <span>Download CV</span>
+          </a>
+
+          <button 
+            class="btn apple-link bg-transparent border-0 p-0 text-decoration-none hero-book-call-btn" 
+            data-cal-link="rajdipghosh/call" 
+            data-cal-namespace="call" 
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+            (click)="openCalBooking()">
+            <span>Book 1:1 Call</span>
+            <i class="uil uil-angle-right-b fs-5"></i>
+          </button>
+        </div>
+
+        <!-- Social Connectivity Pills -->
+        <div class="d-flex align-items-center gap-2">
+          <a [href]="profile.linkedin" target="_blank" rel="noopener noreferrer" class="apple-social-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+            <i class="uil uil-linkedin-alt"></i>
+          </a>
+          <a [href]="profile.github" target="_blank" rel="noopener noreferrer" class="apple-social-btn" aria-label="GitHub Profile" title="GitHub">
+            <i class="uil uil-github-alt"></i>
+          </a>
+          <a [href]="profile.twitter" target="_blank" rel="noopener noreferrer" class="apple-social-btn" aria-label="Twitter Profile" title="Twitter">
+            <i class="uil uil-twitter-alt"></i>
+          </a>
+          <a [href]="'mailto:' + profile.email" class="apple-social-btn" aria-label="Email" title="Direct Email">
+            <i class="uil uil-envelope-alt"></i>
+          </a>
+          <a [href]="'tel:' + profile.phone" class="apple-social-btn" aria-label="Phone" title="Phone Call">
+            <i class="uil uil-phone-alt"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Apple Titanium Portrait Frame -->
+      <div class="col-lg-5 col-12 d-flex justify-content-center">
+        <div class="apple-device-frame position-relative p-2" oncontextmenu="return false;">
+          <div class="apple-frame-halo"></div>
+          
+          <div class="apple-portrait-container overflow-hidden position-relative">
+            <img 
+              [src]="profile.avatarUrl" 
+              [alt]="profile.fullName" 
+              class="avatar-img w-100 h-100 object-fit-cover" 
+              width="270" 
+              height="270" 
+              fetchpriority="high"
+              draggable="false"
+              oncontextmenu="return false;"
+              ondragstart="return false;" />
+          </div>
+
+          <!-- Apple Silicon Floating Feature Pills -->
+          <div class="floating-pill pill-angular apple-pill-tag">
+            <img src="assets/img/skills/angular.svg" alt="Angular" width="16" height="16" draggable="false" />
+            <span>Angular v6-20</span>
+          </div>
+
+          <div class="floating-pill pill-rxjs apple-pill-tag">
+            <img src="assets/img/skills/ag-grid.svg" alt="AG Grid" width="16" height="16" draggable="false" />
+            <span>AG Grid &amp; Nx</span>
+          </div>
+
+          <div class="floating-pill pill-node apple-pill-tag">
+            <img src="assets/img/skills/nodejs.svg" alt="Node" width="16" height="16" draggable="false" />
+            <span>Node &amp; Express</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Apple Benchmark Metrics Strip (M-Series Style) -->
+    <div class="glass-panel p-3 p-md-4 mb-4 mb-md-5">
+      <div class="row text-center g-0 align-items-center apple-metrics-grid">
+        <div class="col-6 col-md-3 metric-col">
+          <div class="apple-metric-number">5+</div>
+          <div class="apple-metric-label">Years of Experience</div>
+        </div>
+        <div class="col-6 col-md-3 metric-col metric-border-left">
+          <div class="apple-metric-number">14+</div>
+          <div class="apple-metric-label">Enterprise Systems</div>
+        </div>
+        <div class="col-6 col-md-3 metric-col metric-border-left-desktop">
+          <div class="apple-metric-number">4</div>
+          <div class="apple-metric-label">Companies &amp; Clients</div>
+        </div>
+        <div class="col-6 col-md-3 metric-col metric-border-left">
+          <div class="apple-metric-number apple-blue-text">70%</div>
+          <div class="apple-metric-label">Load Time Reduction</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Integrated Overview Showcase (Apple Bento Grid) -->
+    <div class="row g-4 align-items-stretch">
+      
+      <!-- Narrative Showcase Card (Bootstrap col-lg-7) -->
+      <div class="col-lg-7 col-12">
+        <div class="glass-panel p-4 p-md-5 h-100 d-flex flex-column justify-content-between gap-4">
+          <div>
+            <span class="apple-eyebrow">Engineering Philosophy</span>
+            <h2 class="fs-4 fw-bold text-headings mb-3">Architected for scale. Proven in production.</h2>
+            
+            <p class="lead fs-6 mb-3 lh-base text-main">
+              {{ profile.bio }}
+            </p>
+
+            <p class="text-secondary fs-7 mb-4 lh-base">
+              Over the past 5 years across <strong class="text-headings">Accolite (Morgan Stanley)</strong>, <strong class="text-headings">NeoSOFT (DS Smith)</strong>, and <strong class="text-headings">Xempla</strong>, I have specialized in architecting complex enterprise data workflows into fluid, intuitive user interfaces that load instantly and scale effortlessly.
+            </p>
+
+            <!-- Feature Pillars -->
+            <div class="d-flex flex-column gap-3">
+              <div class="value-pillar-item p-3 rounded-3 d-flex align-items-center gap-3">
+                <div class="pillar-icon-box d-flex align-items-center justify-content-center rounded-3">
+                  <i class="uil uil-layer-group fs-5"></i>
+                </div>
+                <div>
+                  <strong class="text-headings d-block mb-0 fs-7">Angular (v6-20), Signals &amp; Nx Monorepos</strong>
+                  <span class="text-muted fs-8">Micro Frontend Architecture, AG Grid tables &amp; 70% load time cut</span>
+                </div>
+              </div>
+
+              <div class="value-pillar-item p-3 rounded-3 d-flex align-items-center gap-3">
+                <div class="pillar-icon-box d-flex align-items-center justify-content-center rounded-3">
+                  <i class="uil uil-server-network fs-5"></i>
+                </div>
+                <div>
+                  <strong class="text-headings d-block mb-0 fs-7">Full-Stack Node.js &amp; REST Microservices</strong>
+                  <span class="text-muted fs-8">High-throughput Express APIs, event-driven data streaming &amp; JWT/OAuth2</span>
+                </div>
+              </div>
+
+              <div class="value-pillar-item p-3 rounded-3 d-flex align-items-center gap-3">
+                <div class="pillar-icon-box d-flex align-items-center justify-content-center rounded-3">
+                  <i class="uil uil-robot fs-5"></i>
+                </div>
+                <div>
+                  <strong class="text-headings d-block mb-0 fs-7">Spec-Driven Development &amp; AI Workflows</strong>
+                  <span class="text-muted fs-8">Prompt Engineering, OpenAPI contracts &amp; GitHub Copilot / Claude Code</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action CTAs -->
+          <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary border-opacity-25">
+            <a [href]="profile.resumeDriveUrl" target="_blank" rel="noopener noreferrer" class="btn-apple-primary py-2 px-4 fs-8">
+              <i class="uil uil-file-download-alt"></i>
+              <span>Download Resume (PDF)</span>
+            </a>
+            <a href="#contact" class="btn-apple-secondary py-2 px-4 fs-8">
+              <span>Get In Touch</span>
+              <i class="uil uil-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Snapshot Spec Card (Bootstrap col-lg-5) -->
+      <div class="col-lg-5 col-12">
+        <div class="glass-panel p-4 p-md-5 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h3 class="fs-5 fw-bold text-headings mb-4 tracking-tight">Quick Snapshot</h3>
+
+            <div class="d-flex flex-column gap-3 fs-7">
+              <div class="pb-3 border-bottom border-secondary border-opacity-25">
+                <span class="apple-eyebrow mb-1">Current Role</span>
+                <strong class="text-headings d-block fs-6">Senior Software Engineer at Accolite</strong>
+              </div>
+
+              <div class="pb-3 border-bottom border-secondary border-opacity-25">
+                <span class="apple-eyebrow mb-1">Key Clients</span>
+                <strong class="text-headings d-block">Morgan Stanley, DS Smith</strong>
+              </div>
+
+              <div class="pb-3 border-bottom border-secondary border-opacity-25">
+                <span class="apple-eyebrow mb-1">Core Specialization</span>
+                <strong class="text-headings d-block">Angular (v6-20) + Node.js Full-Stack + AG Grid</strong>
+              </div>
+
+              <div class="pb-3 border-bottom border-secondary border-opacity-25">
+                <span class="apple-eyebrow mb-1">AI &amp; Productivity Tooling</span>
+                <strong class="text-headings d-block">GitHub Copilot / Claude Code, Prompt Engineering</strong>
+              </div>
+
+              <div class="pb-3 border-bottom border-secondary border-opacity-25">
+                <span class="apple-eyebrow mb-1">Experience</span>
+                <strong class="text-headings d-block">5+ Years (2021 - Present)</strong>
+              </div>
+
+              <div class="pb-3 border-bottom border-secondary border-opacity-25">
+                <span class="apple-eyebrow mb-1">Degree</span>
+                <strong class="text-headings d-block">B.Tech in CSE (MAKAUT, First Class)</strong>
+              </div>
+
+              <div>
+                <span class="apple-eyebrow mb-1">Locations</span>
+                <strong class="text-headings d-block">{{ profile.location }}</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Apple Verification Seal -->
+          <div class="pt-4 mt-4 border-top border-secondary border-opacity-25 d-flex align-items-center gap-3">
+            <div class="pillar-icon-box d-flex align-items-center justify-content-center rounded-circle">
+              <i class="uil uil-check-circle text-headings fs-5"></i>
+            </div>
+            <div>
+              <span class="text-headings fw-bold fs-7 d-block">Enterprise Ready</span>
+              <span class="text-muted fs-8">Security cleared &amp; Agile certified</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

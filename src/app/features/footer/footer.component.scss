@@ -1,0 +1,38 @@
+.fs-7 { font-size: 0.85rem; }
+.fs-8 { font-size: 0.75rem; }
+.max-w-sm { max-width: 340px; }
+
+.apple-brand-symbol {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--text-headings);
+  color: var(--text-inverse);
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.hover-white:hover {
+  color: var(--text-headings) !important;
+}
+
+.apple-social-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-chip);
+  border: 1px solid var(--glass-border-subtle);
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  transition: all var(--transition-fast);
+}
+
+.apple-social-circle:hover {
+  color: var(--text-headings);
+  background: var(--bg-chip-hover);
+  border-color: var(--glass-border-hover);
+  transform: scale(1.08);
+}

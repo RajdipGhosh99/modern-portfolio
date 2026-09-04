@@ -1,0 +1,19 @@
+<!-- Top Scroll Reading Progress Bar -->
+<div class="scroll-progress-container">
+  <div class="scroll-progress-bar" [style.width.%]="scrollProgress()"></div>
+</div>
+
+<!-- Ambient Glowing Background Mesh Orbs -->
+<div class="ambient-bg" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+</div>
+
+<!-- Main Glass Shell -->
+<div class="portfolio-shell">
+  <app-header />
+  
+  <router-outlet />
+
+  <app-footer />
+</div>

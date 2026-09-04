@@ -1,0 +1,121 @@
+.fs-7 { font-size: 0.875rem; }
+.fs-8 { font-size: 0.75rem; }
+
+.tab-period {
+  color: var(--text-muted) !important;
+}
+
+.achievement-text {
+  color: var(--text-secondary) !important;
+}
+
+.apple-company-col {
+  background: var(--bg-card);
+}
+
+.apple-company-item {
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.apple-company-item:hover {
+  background: var(--bg-card-hover) !important;
+}
+
+.apple-company-item.tab-active {
+  background: var(--bg-card-active) !important;
+}
+
+.apple-company-item.tab-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--apple-blue);
+}
+
+/* Apple Segmented Pill Switcher */
+.apple-segmented-pill {
+  display: inline-flex;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-pill);
+}
+
+.apple-segment-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.775rem;
+  font-weight: 500;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+}
+
+.apple-segment-btn.active {
+  background: var(--text-headings);
+  color: var(--text-inverse);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   TABLET & MOBILE RESPONSIVE EXPERIENCE TABS
+   ========================================================================== */
+@media (max-width: 991.98px) {
+  .apple-company-col {
+    border-right: none !important;
+    border-bottom: 1px solid var(--glass-border-subtle);
+  }
+
+  .apple-company-col > .d-flex.flex-column {
+    flex-direction: row !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .apple-company-item {
+    min-width: 175px;
+    flex-shrink: 0;
+    border-bottom: none !important;
+    border-right: 1px solid var(--glass-border-subtle);
+    padding: 0.85rem 1rem !important;
+
+    &.tab-active::before {
+      left: 0;
+      right: 0;
+      top: auto;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .role-header-meta {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .role-period-box {
+    text-align: left !important;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .role-period-box .mt-1 {
+    margin-top: 0 !important;
+  }
+}
+

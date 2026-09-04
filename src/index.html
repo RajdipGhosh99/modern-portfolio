@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#070b14" />
+  <title>Rajdip Ghosh | Senior Software Engineer - Angular &amp; Node.js Specialist</title>
+  
+  <!-- Base HREF for Angular routing -->
+  <base href="/" />
+
+  <!-- Build & Runtime Architecture Metadata -->
+  <meta name="generator" content="Angular 19, Express SSR" />
+  <meta name="build-version" content="2.0.0" />
+  <meta name="build-date" content="2026-09-04" />
+  <meta name="application-name" content="Rajdip Ghosh Portfolio" />
+
+  <!-- Instant System Theme Initializer (Defaults to System Theme, Prevents FOUC) -->
+  <script>
+    (function() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var qTheme = params.get('theme');
+        var explicitTheme = localStorage.getItem('rajdip_theme_explicit');
+        
+        // System preference detection (prefers-color-scheme)
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var systemTheme = prefersDark ? 'dark' : 'light';
+        
+        // Priority: 1. URL Query Param (?theme=), 2. Explicit User Override, 3. System Theme
+        var theme = (qTheme === 'light' || qTheme === 'dark') ? qTheme :
+                    (explicitTheme === 'light' || explicitTheme === 'dark') ? explicitTheme :
+                    systemTheme;
+
+        var root = document.documentElement;
+        root.setAttribute('data-theme', theme);
+        root.setAttribute('data-bs-theme', theme);
+        if (theme === 'light') {
+          root.classList.remove('dark');
+          root.classList.add('light');
+        } else {
+          root.classList.remove('light');
+          root.classList.add('dark');
+        }
+        var metaTheme = document.querySelector('meta[name="theme-color"]');
+        if (metaTheme) {
+          metaTheme.setAttribute('content', theme === 'light' ? '#f5f5f7' : '#070b14');
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+  <!-- Meta Description & High-Impact Keywords for Google Ranking -->
+  <meta name="description" content="Senior Software Engineer with 5+ years of experience engineering high-concurrency web systems using Angular (v6-20), TypeScript, RxJS, NgRx, and Node.js. Consultant for Morgan Stanley and DS Smith." />
+  <meta name="keywords" content="Rajdip Ghosh, Senior Software Engineer, Senior Angular Developer, Angular Node.js Developer, Angular Specialist, AG Grid Architect, Nx Monorepo, Micro Frontend Architecture, Spec-Driven Development, Prompt Engineering, GitHub Copilot Claude Code, TypeScript, RxJS, NgRx, Node.js, Express, Morgan Stanley Consultant, DS Smith ParceLive, Angular 20 SSR, Full-Stack Developer Bengaluru India, Web Performance Optimization" />
+  <meta name="author" content="Rajdip Ghosh" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta http-equiv="Content-Language" content="en" />
+  <meta name="rating" content="General" />
+  <meta name="revisit-after" content="7 days" />
+
+  <!-- Geo & Regional Location Tags -->
+  <meta name="geo.region" content="IN-KA" />
+  <meta name="geo.placename" content="Bengaluru" />
+  <meta name="geo.position" content="12.9716;77.5946" />
+  <meta name="ICBM" content="12.9716, 77.5946" />
+  
+  <!-- Webmaster Verification -->
+  <meta name="google-site-verification" content="F3EyG4fnxr2J-BQzZDIxk7YQUwXvhPYVlOzUxrtzz4k" />
+  <meta name="msvalidate.01" content="CB200F3C80B2767840C2418194583D88" />
+
+  <!-- Canonical URL & Alternates -->
+  <link rel="canonical" href="https://rajdipghosh.vercel.app/" />
+  <link rel="alternate" hreflang="en-IN" href="https://rajdipghosh.vercel.app/" />
+  <link rel="alternate" hreflang="en-US" href="https://rajdipghosh.vercel.app/" />
+  <link rel="alternate" hreflang="x-default" href="https://rajdipghosh.vercel.app/" />
+
+  <!-- Open Graph / Facebook / WhatsApp / LinkedIn / Slack -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rajdipghosh.vercel.app/" />
+  <meta property="og:site_name" content="Rajdip Ghosh Portfolio" />
+  <meta property="og:title" content="Rajdip Ghosh | Senior Software Engineer - Angular & Node.js Specialist" />
+  <meta property="og:description" content="Senior Software Engineer with 5+ years engineering high-concurrency web systems, AG Grid financial ledgers, and resilient Node.js APIs across Morgan Stanley and DS Smith." />
+  <meta property="og:image" content="https://rajdipghosh.vercel.app/assets/img/og-preview.png" />
+  <meta property="og:image:secure_url" content="https://rajdipghosh.vercel.app/assets/img/og-preview.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Rajdip Ghosh - Senior Software Engineer" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="en_IN" />
+
+  <!-- Legacy & WhatsApp Crawler Image Fallback -->
+  <link rel="image_src" href="https://rajdipghosh.vercel.app/assets/img/og-preview.png" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://rajdipghosh.vercel.app/" />
+  <meta name="twitter:title" content="Rajdip Ghosh | Senior Software Engineer - Angular & Node.js Specialist" />
+  <meta name="twitter:description" content="Senior Software Engineer with 5+ years engineering high-concurrency web systems, AG Grid financial ledgers, and resilient Node.js APIs across Morgan Stanley and DS Smith." />
+  <meta name="twitter:image" content="https://rajdipghosh.vercel.app/assets/img/og-preview.png" />
+  <meta name="twitter:image:alt" content="Rajdip Ghosh - Senior Software Engineer" />
+  <meta name="twitter:creator" content="@raazdeepghosh" />
+  <meta name="twitter:site" content="@raazdeepghosh" />
+
+  <!-- PWA & Mobile Web App Settings -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Rajdip Ghosh" />
+
+  <!-- PWA Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      function registerSW() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function(reg) {
+            console.log('PWA ServiceWorker registered successfully with scope:', reg.scope);
+          })
+          .catch(function(err) {
+            console.warn('PWA ServiceWorker registration failed:', err);
+          });
+      }
+      if (document.readyState === 'complete') {
+        registerSW();
+      } else {
+        window.addEventListener('load', registerSW);
+      }
+    }
+  </script>
+
+
+  <!-- Favicons (Standard Multi-res ICO + High-res PNG + SVG Vector + Apple Touch) -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2.0.0" />
+  <link rel="shortcut icon" href="/favicon.ico?v=2.0.0" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=2.0.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2.0.0" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2.0.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2.0.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2.0.0" />
+
+  <!-- Image Protection: Block Right-Click and Image Dragging -->
+  <script>
+    (function() {
+      // Disable context menu on images and portrait elements
+      document.addEventListener('contextmenu', function(e) {
+        if (e.target && (e.target.tagName === 'IMG' || e.target.closest('img') || e.target.closest('.apple-device-frame') || e.target.closest('.apple-portrait-container') || e.target.closest('.hex-node'))) {
+          e.preventDefault();
+          return false;
+        }
+      }, { passive: false });
+
+      // Disable drag on images
+      document.addEventListener('dragstart', function(e) {
+        if (e.target && (e.target.tagName === 'IMG' || e.target.closest('img') || e.target.closest('.apple-portrait-container'))) {
+          e.preventDefault();
+          return false;
+        }
+      }, { passive: false });
+    })();
+  </script>
+
+  <!-- Fonts Preconnect & Styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- FontAwesome 6 & Unicons Icons -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Rich Structured Data JSON-LD (Schema.org Person, WebSite, ItemList, BreadcrumbList) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://rajdipghosh.vercel.app/#person",
+        "name": "Rajdip Ghosh",
+        "givenName": "Rajdip",
+        "familyName": "Ghosh",
+        "jobTitle": "Senior Software Engineer",
+        "description": "Experienced Software Engineer with 5 years of experience building scalable and high-performance web applications using Angular, Node.js, Express, and TypeScript. Strong expertise in component architecture, RxJS, and NgRx state management.",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Accolite",
+          "department": "Morgan Stanley Financial Platform Consulting"
+        },
+        "url": "https://rajdipghosh.vercel.app/",
+        "image": "https://rajdipghosh.vercel.app/assets/img/rajdip-avatar.png",
+        "email": "raazdeepghosh@gmail.com",
+        "telephone": "+919933159842",
+        "gender": "Male",
+        "nationality": "Indian",
+        "sameAs": [
+          "https://www.linkedin.com/in/rajdipghosh",
+          "https://github.com/RajdipGhosh99",
+          "https://twitter.com/raazdeepghosh",
+          "https://cal.com/rajdipghosh/call"
+        ],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Maulana Abul Kalam Azad University of Technology (MAKAUT)"
+        },
+        "knowsAbout": [
+          "Angular",
+          "Angular 20",
+          "TypeScript",
+          "JavaScript (ES6+)",
+          "RxJS",
+          "NgRx",
+          "Node.js",
+          "Express.js",
+          "Micro Frontends",
+          "Web Performance Optimization",
+          "Server-Side Rendering (SSR)",
+          "SCSS/SASS",
+          "Tailwind CSS",
+          "Bootstrap",
+          "MongoDB",
+          "Jasmine & Karma Testing",
+          "Agile Scrum",
+          "REST APIs",
+          "FastAPI",
+          "Python"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bengaluru",
+          "addressRegion": "Karnataka",
+          "addressCountry": "India"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://rajdipghosh.vercel.app/#website",
+        "url": "https://rajdipghosh.vercel.app/",
+        "name": "Rajdip Ghosh | Senior Software Engineer Portfolio",
+        "description": "Portfolio website of Rajdip Ghosh. Professional experience, skills, enterprise & open-source projects, and contact info.",
+        "publisher": {
+          "@id": "https://rajdipghosh.vercel.app/#person"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://rajdipghosh.vercel.app/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rajdipghosh.vercel.app/#hero"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About",
+            "item": "https://rajdipghosh.vercel.app/#about"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Skills",
+            "item": "https://rajdipghosh.vercel.app/#skills"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Experience",
+            "item": "https://rajdipghosh.vercel.app/#experience"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Projects",
+            "item": "https://rajdipghosh.vercel.app/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Contact",
+            "item": "https://rajdipghosh.vercel.app/#contact"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://rajdipghosh.vercel.app/#projectsList",
+        "name": "Featured Projects by Rajdip Ghosh",
+        "itemListElement": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "PPM - Morgan Stanley",
+            "applicationCategory": "FinancialApplication",
+            "operatingSystem": "Web",
+            "description": "Internal funding management and portfolio allocation system engineered for Morgan Stanley."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "ParceLive - DS Smith",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "description": "Real-time IoT shipment monitoring and logistics sensor telemetry dashboard."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Xempla Core",
+            "applicationCategory": "EnterpriseApplication",
+            "operatingSystem": "Web",
+            "description": "B2B SaaS Asset Intelligence ERP platform featuring dynamic data processing and 70% load time cut."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Google Maps Clone",
+            "applicationCategory": "GeospatialApplication",
+            "operatingSystem": "Web",
+            "url": "https://google-maps-clone-chi.vercel.app",
+            "description": "Lightweight Google Maps clone using Angular, TypeScript, and Mapbox GL."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-91QK3BTLC2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-91QK3BTLC2', { page_path: window.location.pathname });
+  </script>
+
+  <!-- Cal element-click embed code begins -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "call", { origin: "https://app.cal.com" });
+    Cal.config = Cal.config || {};
+    Cal.config.forwardQueryParams = true;
+    Cal.ns.call("ui", { "cssVarsPerTheme": { "dark": { "cal-brand": "#6366f1" }, "light": { "cal-brand": "#4f46e5" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+  </script>
+  <!-- Cal element-click embed code ends -->
+</head>
+<body class="antialiased selection:bg-indigo-500/30 selection:text-indigo-200">
+  <app-root></app-root>
+</body>
+</html>

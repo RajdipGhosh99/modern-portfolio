@@ -1,0 +1,52 @@
+<main class="not-found-viewport" role="main">
+  <div class="glow-orb-primary"></div>
+  <div class="glow-orb-secondary"></div>
+
+  <div class="container not-found-container">
+    <div class="not-found-card">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>HTTP STATUS 404</span>
+      </div>
+
+      <div class="glitch-wrapper">
+        <span class="numeral-gradient">404</span>
+      </div>
+
+      <h1 class="not-found-title">Page Not Found</h1>
+      <p class="not-found-subtitle">
+        The coordinates you requested do not exist or the resource has been relocated.
+      </p>
+
+      <div class="action-cluster">
+        <a routerLink="/" class="btn-apple-primary">
+          <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span>Return to Homepage</span>
+        </a>
+
+        <button type="button" class="btn-apple-secondary" (click)="navigateToSection('projects')">
+          <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+          <span>View Projects</span>
+        </button>
+
+        <button type="button" class="btn-apple-tertiary" (click)="navigateToSection('contact')">
+          <span>Contact Rajdip</span>
+          <svg class="btn-icon-end" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/>
+            <path d="m12 5 7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="provenance-tag">
+        <code>{{ baseUrl }}</code>
+      </div>
+    </div>
+  </div>
+</main>

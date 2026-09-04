@@ -1,0 +1,120 @@
+<section id="projects" class="section">
+  <div class="container">
+    
+    <!-- Apple Eyebrow & Title Header -->
+    <div class="text-center mb-4">
+      <span class="apple-eyebrow">Engineered Platforms</span>
+      <h2 class="section-title">Featured Work.</h2>
+      <p class="section-subtitle mx-auto">
+        Enterprise client systems, high-concurrency cloud dashboards, and web applications.
+      </p>
+    </div>
+
+    <!-- Apple Segmented Pill Filter Bar -->
+    <div class="d-flex justify-content-center mb-4">
+      <div class="apple-segmented-pill p-1">
+        <button 
+          class="apple-segment-btn" 
+          [class.active]="selectedCategory() === 'all'"
+          (click)="setCategory('all')">
+          All Systems ({{ allProjects.length }})
+        </button>
+        <button 
+          class="apple-segment-btn" 
+          [class.active]="selectedCategory() === 'enterprise'"
+          (click)="setCategory('enterprise')">
+          Enterprise &amp; Client
+        </button>
+        <button 
+          class="apple-segment-btn" 
+          [class.active]="selectedCategory() === 'fullstack'"
+          (click)="setCategory('fullstack')">
+          Full-Stack &amp; Web Apps
+        </button>
+      </div>
+    </div>
+
+    <!-- Apple Bento Grid for Projects -->
+    <div class="row g-4">
+      @for (project of displayedProjects(); track project.id) {
+        <div class="col-md-6 col-12">
+          <article class="glass-panel overflow-hidden h-100 d-flex flex-column">
+            
+            <!-- Project Image Showcase -->
+            <div class="position-relative project-thumb-wrapper overflow-hidden">
+              @if (project.imageUrl) {
+                <img [src]="project.imageUrl" [alt]="project.title" class="project-img w-100 h-100 object-fit-cover" loading="lazy" width="400" height="190" />
+              } @else {
+                <div class="w-100 h-100 d-flex align-items-center justify-content-center bg-dark text-secondary">
+                  <i class="uil uil-window-grid fs-2"></i>
+                </div>
+              }
+              
+              <!-- Apple Pill Badge -->
+              <span class="position-absolute top-0 end-0 m-3 apple-status-pill fs-8">
+                {{ project.category === 'enterprise' ? 'Enterprise' : 'Full Stack' }}
+              </span>
+            </div>
+
+            <!-- Project Details Panel -->
+            <div class="p-4 d-flex flex-column gap-2 flex-grow-1">
+              <div>
+                <span class="apple-eyebrow mb-1 d-block">{{ project.subtitle }}</span>
+                <h3 class="fs-5 fw-bold text-headings mb-1">{{ project.title }}</h3>
+              </div>
+              
+              <p class="project-desc mb-2 flex-grow-1">{{ project.description }}</p>
+
+              @if (project.impact) {
+                <div class="p-3 rounded-3 apple-impact-box w-100 d-flex align-items-start gap-2 mb-2">
+                  <i class="uil uil-bolt-alt apple-blue-text fs-6 mt-1 flex-shrink-0"></i>
+                  <span class="text-headings fs-8"><strong class="apple-blue-text">Impact:</strong> {{ project.impact }}</span>
+                </div>
+              }
+
+              <!-- Tech Stack Pills -->
+              <div class="d-flex flex-wrap gap-1 my-1">
+                @for (tech of project.technologies; track tech) {
+                  <span class="tech-badge">{{ tech }}</span>
+                }
+              </div>
+
+              <!-- Footer Actions (Apple Link Style) -->
+              <div class="pt-3 mt-auto border-top border-secondary border-opacity-25 d-flex align-items-center gap-3">
+                @if (project.demoUrl) {
+                  <a [href]="project.demoUrl" target="_blank" rel="noopener noreferrer" class="apple-link fs-7">
+                    <span>Live Demo</span>
+                    <i class="uil uil-angle-right-b fs-6"></i>
+                  </a>
+                }
+                @if (project.githubUrl) {
+                  <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="apple-link text-secondary fs-7">
+                    <i class="uil uil-github-alt"></i>
+                    <span>Source</span>
+                  </a>
+                }
+                @if (!project.demoUrl && !project.githubUrl) {
+                  <span class="text-muted fs-8">
+                    <i class="uil uil-shield-check"></i> Enterprise Client Platform
+                  </span>
+                }
+              </div>
+            </div>
+
+          </article>
+        </div>
+      }
+    </div>
+
+    <!-- Toggle View More Button -->
+    @if (selectedCategory() === 'all') {
+      <div class="d-flex justify-content-center mt-4">
+        <button class="btn-apple-secondary py-2 px-4 fs-8" (click)="toggleExpand()">
+          <span>{{ showAllProjects() ? 'Show Featured Only' : 'View All ' + allProjects.length + ' Projects' }}</span>
+          <i [class]="showAllProjects() ? 'uil uil-angle-up' : 'uil uil-angle-down'"></i>
+        </button>
+      </div>
+    }
+
+  </div>
+</section>

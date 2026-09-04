@@ -1,0 +1,205 @@
+<section id="experience" class="section">
+  <div class="container">
+    
+    <!-- Apple Eyebrow & Title Header -->
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+      <div>
+        <span class="apple-eyebrow">Career &amp; Provenance</span>
+        <h2 class="section-title mb-1">Enterprise Experience.</h2>
+        <p class="section-subtitle mb-0">
+          5 years of engineering mission-critical UI systems across Morgan Stanley, DS Smith, and B2B SaaS ERPs.
+        </p>
+      </div>
+
+      <!-- Apple Segmented Pill Switcher -->
+      <div class="apple-segmented-pill p-1">
+        <button 
+          class="apple-segment-btn" 
+          [class.active]="!showAll()"
+          (click)="showAll.set(false)">
+          Tabbed View
+        </button>
+        <button 
+          class="apple-segment-btn" 
+          [class.active]="showAll()"
+          (click)="showAll.set(true)">
+          All History
+        </button>
+      </div>
+    </div>
+
+    @if (!showAll()) {
+      <!-- Apple Pro Bento Container -->
+      <div class="glass-panel overflow-hidden">
+        <div class="row g-0">
+          
+          <!-- Left Company Column (Bootstrap col-lg-4) -->
+          <div class="col-lg-4 col-12 border-end border-secondary border-opacity-25 apple-company-col">
+            <div class="d-flex flex-column">
+              @for (exp of experiences; track exp.id) {
+                <button 
+                  class="apple-company-item p-3 border-0 border-bottom border-secondary border-opacity-25 text-start w-100 bg-transparent position-relative"
+                  [class.tab-active]="selectedTab() === exp.id"
+                  (click)="selectedTab.set(exp.id)">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <strong class="fs-6 text-headings">{{ exp.company }}</strong>
+                    @if (exp.isCurrent) {
+                      <span class="current-live-badge">
+                        <span class="live-dot"></span>
+                        <span>Current</span>
+                      </span>
+                    }
+                  </div>
+                  <div class="text-secondary fs-7 fw-normal">{{ exp.role }}</div>
+                  <div class="tab-period fs-8">{{ exp.period }}</div>
+                </button>
+              }
+
+              <!-- Education Tab -->
+              <button 
+                class="apple-company-item p-3 border-0 text-start w-100 bg-transparent position-relative"
+                [class.tab-active]="selectedTab() === 'education'"
+                (click)="selectedTab.set('education')">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <strong class="fs-6 text-headings"><i class="uil uil-graduation-cap me-1"></i> Education</strong>
+                  <span class="tech-badge fs-8">B.Tech</span>
+                </div>
+                <div class="text-secondary fs-7 fw-normal">MAKAUT CSE</div>
+                <div class="tab-period fs-8">2017 - 2021</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Role Detail Panel (Bootstrap col-lg-8) -->
+          <div class="col-lg-8 col-12 p-4 p-md-5 d-flex flex-column justify-content-center">
+            @if (selectedTab() !== 'education') {
+              @if (currentExp(); as exp) {
+                <div class="d-flex flex-column gap-3">
+                  
+                  <!-- Header Meta -->
+                  <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 pb-3 border-bottom border-secondary border-opacity-25 role-header-meta">
+                    <div>
+                      <div class="d-flex align-items-center gap-2 mb-1">
+                        <h3 class="fs-5 fw-bold text-headings mb-0">{{ exp.role }}</h3>
+                        @if (exp.isCurrent) {
+                          <span class="current-live-badge">
+                            <span class="live-dot"></span>
+                            <span>Current</span>
+                          </span>
+                        }
+                      </div>
+                      <div class="d-flex flex-wrap align-items-center gap-2">
+                        <span class="text-headings fw-semibold">{{ exp.company }}</span>
+                        @if (exp.client) {
+                          <span class="badge tech-badge">
+                            Consultant for: {{ exp.client }}
+                          </span>
+                        }
+                        @if (exp.clientBadge) {
+                          <span class="text-secondary fs-8">({{ exp.clientBadge }})</span>
+                        }
+                      </div>
+                    </div>
+
+                    <div class="text-end role-period-box">
+                      <span class="tech-badge px-3 py-1">
+                        {{ exp.period }}
+                      </span>
+                      <div class="text-secondary fs-8 mt-1"><i class="uil uil-map-marker"></i> {{ exp.location }}</div>
+                    </div>
+                  </div>
+
+                  <!-- Bullet Achievements -->
+                  <ul class="list-unstyled d-flex flex-column gap-2 m-0 p-0">
+                    @for (ach of exp.achievements; track ach) {
+                      <li class="d-flex align-items-start gap-2 fs-7 lh-base">
+                        <i class="uil uil-check-circle apple-blue-text fs-6 mt-1 flex-shrink-0"></i>
+                        <span class="achievement-text">{{ ach }}</span>
+                      </li>
+                    }
+                  </ul>
+
+                  <!-- Tech Stack Pills -->
+                  <div class="pt-3 border-top border-secondary border-opacity-25 d-flex flex-wrap align-items-center gap-2">
+                    <span class="apple-eyebrow mb-0 me-1">Stack:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                      @for (tech of exp.technologies; track tech) {
+                        <span class="tech-badge">{{ tech }}</span>
+                      }
+                    </div>
+                  </div>
+
+                </div>
+              }
+            } @else {
+              <!-- Education Details -->
+              <div class="d-flex flex-column gap-3">
+                <div class="d-flex justify-content-between align-items-start pb-3 border-bottom border-secondary border-opacity-25">
+                  <div>
+                    <h3 class="fs-5 fw-bold text-headings mb-1">{{ educationList[0].degree }}</h3>
+                    <span class="text-secondary">{{ educationList[0].institution }}</span>
+                  </div>
+                  <span class="tech-badge px-3 py-1">
+                    {{ educationList[0].period }}
+                  </span>
+                </div>
+
+                <ul class="list-unstyled d-flex flex-column gap-2 m-0 p-0">
+                  @for (hl of educationList[0].highlights; track hl) {
+                    <li class="d-flex align-items-start gap-2 fs-7">
+                      <i class="uil uil-check-circle apple-blue-text fs-6 mt-1 flex-shrink-0"></i>
+                      <span class="achievement-text">{{ hl }}</span>
+                    </li>
+                  }
+                </ul>
+
+                <div class="p-3 rounded-3 glass-card d-flex justify-content-between align-items-center">
+                  <strong class="text-headings fs-7">{{ educationList[1].degree }}</strong>
+                  <span class="text-secondary fs-8">{{ educationList[1].institution }} ({{ educationList[1].period }})</span>
+                </div>
+              </div>
+            }
+          </div>
+
+        </div>
+      </div>
+    } @else {
+      <!-- All History Continuous Bento Cards -->
+      <div class="d-flex flex-column gap-3">
+        @for (exp of experiences; track exp.id) {
+          <div class="glass-panel p-4 p-md-5">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <div>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <h3 class="fs-5 fw-bold text-headings mb-0">{{ exp.role }}</h3>
+                  @if (exp.isCurrent) {
+                    <span class="current-live-badge">
+                      <span class="live-dot"></span>
+                      <span>Current</span>
+                    </span>
+                  }
+                </div>
+                <div class="text-secondary">{{ exp.company }}</div>
+              </div>
+              <span class="tech-badge">{{ exp.period }}</span>
+            </div>
+            <ul class="list-unstyled d-flex flex-column gap-2 my-3">
+              @for (ach of exp.achievements; track ach) {
+                <li class="d-flex align-items-start gap-2 fs-7">
+                  <i class="uil uil-check-circle apple-blue-text flex-shrink-0"></i>
+                  <span class="achievement-text">{{ ach }}</span>
+                </li>
+              }
+            </ul>
+            <div class="d-flex flex-wrap gap-1 mt-2">
+              @for (tech of exp.technologies; track tech) {
+                <span class="tech-badge">{{ tech }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    }
+
+  </div>
+</section>

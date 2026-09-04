@@ -1,0 +1,60 @@
+<header class="header-nav fixed-top" [class.scrolled]="isScrolled()">
+  <div class="container d-flex align-items-center justify-content-between h-100 px-3 px-sm-4">
+    
+    <!-- Apple Brand Identity -->
+    <a href="#hero" class="d-flex align-items-center gap-2 text-decoration-none" (click)="closeMobileMenu()">
+      <span class="apple-brand-symbol d-inline-flex align-items-center justify-content-center">R</span>
+      <span class="fw-semibold text-headings fs-6 tracking-tight">Rajdip Ghosh</span>
+    </a>
+
+    <!-- Desktop Navigation Links (Apple SF Pro Style) -->
+    <nav class="d-none d-lg-block" aria-label="Main Navigation">
+      <ul class="d-flex align-items-center list-unstyled gap-4 m-0 p-0">
+        <li><a href="#hero" class="nav-link-apple" [class.active]="activeSection() === 'hero'">Overview</a></li>
+        <li><a href="#skills" class="nav-link-apple" [class.active]="activeSection() === 'skills'">Tech Stack</a></li>
+        <li><a href="#experience" class="nav-link-apple" [class.active]="activeSection() === 'experience'">Experience</a></li>
+        <li><a href="#projects" class="nav-link-apple" [class.active]="activeSection() === 'projects'">Featured Work</a></li>
+        <li><a href="#contact" class="nav-link-apple" [class.active]="activeSection() === 'contact'">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Action CTAs -->
+    <div class="d-flex align-items-center gap-2">
+      <!-- Theme Switcher -->
+      <button 
+        class="btn-theme-apple d-inline-flex align-items-center justify-content-center" 
+        (click)="themeService.toggleTheme()" 
+        [attr.aria-label]="themeService.currentTheme() === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
+        [title]="themeService.currentTheme() === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
+        <i [class]="themeService.currentTheme() === 'dark' ? 'uil uil-sun' : 'uil uil-moon'"></i>
+      </button>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="btn btn-sm btn-glass d-lg-none p-1 px-2 btn-mobile-toggle" (click)="toggleMobileMenu()" [attr.aria-expanded]="mobileMenuOpen()" aria-label="Toggle menu">
+        <i [class]="mobileMenuOpen() ? 'uil uil-times' : 'uil uil-bars'"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Drawer -->
+  @if (mobileMenuOpen()) {
+    <div class="mobile-drawer-backdrop d-lg-none" (click)="closeMobileMenu()"></div>
+    <div class="mobile-drawer-container container mt-2 d-lg-none">
+      <div class="glass-panel mobile-drawer-panel p-3 d-flex flex-column gap-2" (click)="$event.stopPropagation()">
+        <ul class="list-unstyled d-flex flex-column gap-1 m-0 p-0">
+          <li><a href="#hero" (click)="closeMobileMenu()" class="mobile-nav-link"><i class="uil uil-estate fs-5"></i> <span>Overview</span></a></li>
+          <li><a href="#skills" (click)="closeMobileMenu()" class="mobile-nav-link"><i class="uil uil-layer-group fs-5"></i> <span>Tech Stack</span></a></li>
+          <li><a href="#experience" (click)="closeMobileMenu()" class="mobile-nav-link"><i class="uil uil-briefcase-alt fs-5"></i> <span>Experience</span></a></li>
+          <li><a href="#projects" (click)="closeMobileMenu()" class="mobile-nav-link"><i class="uil uil-scenery fs-5"></i> <span>Featured Work</span></a></li>
+          <li><a href="#contact" (click)="closeMobileMenu()" class="mobile-nav-link"><i class="uil uil-envelope fs-5"></i> <span>Contact</span></a></li>
+        </ul>
+        <div class="d-flex flex-column gap-2 pt-2 border-top border-secondary border-opacity-25">
+          <button class="btn-apple-secondary w-100 py-2" (click)="themeService.toggleTheme()">
+            <i [class]="themeService.currentTheme() === 'dark' ? 'uil uil-sun' : 'uil uil-moon'"></i>
+            <span>{{ themeService.currentTheme() === 'dark' ? 'Light Appearance' : 'Dark Appearance' }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  }
+</header>

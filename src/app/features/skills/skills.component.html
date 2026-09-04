@@ -1,0 +1,119 @@
+<section id="skills" class="section">
+  <div class="container">
+    
+    <!-- Apple Eyebrow & Title Header -->
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+      <div>
+        <span class="apple-eyebrow">Technical Ecosystem</span>
+        <h2 class="section-title mb-1">Power. Precision. Production.</h2>
+        <p class="section-subtitle mb-0">
+          30 technologies and reactive stream frameworks engineered for high-concurrency enterprise applications and AI-assisted workflows.
+        </p>
+      </div>
+
+      <!-- Apple Motion Toggle Button -->
+      <button 
+        class="btn-apple-secondary py-1 px-3 fs-8"
+        (click)="toggleMotion()">
+        <i [class]="isPaused() ? 'uil uil-play' : 'uil uil-pause'"></i>
+        <span>{{ isPaused() ? 'Resume Movement' : 'Pause Movement' }}</span>
+      </button>
+    </div>
+
+    <!-- Apple Silicon Moving Honeycomb Glass Container -->
+    <div class="glass-panel p-3 p-md-4 overflow-hidden position-relative honeycomb-container">
+      
+      <!-- Edge Fade Masks -->
+      <div class="honeycomb-fade-left"></div>
+      <div class="honeycomb-fade-right"></div>
+
+      <!-- Mathematically True Honeycomb Lattice -->
+      <div class="honeycomb-viewport" [class.motion-paused]="isPaused()">
+        
+        <!-- Row 1: Primary Glide -->
+        <div class="honeycomb-row row-1">
+          <div class="honeycomb-track unified-glide">
+            @for (skill of loopRow1(); track $index) {
+              <div class="hex-node">
+                <div class="hex-inner">
+                  <svg class="hex-svg" viewBox="0 0 120 139">
+                    <polygon points="60,1.5 118.5,35.5 118.5,103.5 60,137.5 1.5,103.5 1.5,35.5" class="hex-polygon-bg" />
+                    <polygon points="60,1.5 118.5,35.5 118.5,103.5 60,137.5 1.5,103.5 1.5,35.5" class="hex-polygon-border" />
+                  </svg>
+                  <div class="hex-content">
+                    <img [src]="skill.icon" [alt]="skill.name" class="hex-icon" loading="lazy" width="24" height="24" />
+                    <span class="hex-name">{{ skill.name }}</span>
+                    <span class="hex-badge">{{ skill.level }}</span>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Row 2: Staggered Honeycomb Interlock (- - -) -->
+        <div class="honeycomb-row row-2">
+          <div class="honeycomb-track unified-glide track-staggered">
+            @for (skill of loopRow2(); track $index) {
+              <div class="hex-node">
+                <div class="hex-inner">
+                  <svg class="hex-svg" viewBox="0 0 120 139">
+                    <polygon points="60,1.5 118.5,35.5 118.5,103.5 60,137.5 1.5,103.5 1.5,35.5" class="hex-polygon-bg" />
+                    <polygon points="60,1.5 118.5,35.5 118.5,103.5 60,137.5 1.5,103.5 1.5,35.5" class="hex-polygon-border" />
+                  </svg>
+                  <div class="hex-content">
+                    <img [src]="skill.icon" [alt]="skill.name" class="hex-icon" loading="lazy" width="24" height="24" />
+                    <span class="hex-name">{{ skill.name }}</span>
+                    <span class="hex-badge">{{ skill.level }}</span>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Row 3: Aligned with Row 1 (- - - -) -->
+        <div class="honeycomb-row row-3">
+          <div class="honeycomb-track unified-glide">
+            @for (skill of loopRow3(); track $index) {
+              <div class="hex-node">
+                <div class="hex-inner">
+                  <svg class="hex-svg" viewBox="0 0 120 139">
+                    <polygon points="60,1.5 118.5,35.5 118.5,103.5 60,137.5 1.5,103.5 1.5,35.5" class="hex-polygon-bg" />
+                    <polygon points="60,1.5 118.5,35.5 118.5,103.5 60,137.5 1.5,103.5 1.5,35.5" class="hex-polygon-border" />
+                  </svg>
+                  <div class="hex-content">
+                    <img [src]="skill.icon" [alt]="skill.name" class="hex-icon" loading="lazy" width="24" height="24" />
+                    <span class="hex-name">{{ skill.name }}</span>
+                    <span class="hex-badge">{{ skill.level }}</span>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Architecture Capabilities Footnote -->
+      <div class="pt-3 mt-3 border-top border-secondary border-opacity-25">
+        <div class="row text-center g-2 align-items-center fs-7">
+          <div class="col-md-4 col-12 d-flex align-items-center justify-content-center gap-2">
+            <i class="uil uil-table fs-5 apple-blue-text"></i>
+            <span class="text-secondary"><strong class="text-headings">Enterprise Scale:</strong> AG Grid, Nx &amp; Micro Frontends</span>
+          </div>
+          <div class="col-md-4 col-12 d-flex align-items-center justify-content-center gap-2 border-md-start border-secondary border-opacity-25">
+            <i class="uil uil-sync fs-5 apple-blue-text"></i>
+            <span class="text-secondary"><strong class="text-headings">Full-Stack Synergy:</strong> Angular Signals + Node.js APIs</span>
+          </div>
+          <div class="col-md-4 col-12 d-flex align-items-center justify-content-center gap-2 border-md-start border-secondary border-opacity-25">
+            <i class="uil uil-robot fs-5 apple-blue-text"></i>
+            <span class="text-secondary"><strong class="text-headings">AI Velocity:</strong> Spec-Driven &amp; Copilot / Claude Code</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

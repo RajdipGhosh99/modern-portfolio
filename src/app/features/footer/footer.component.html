@@ -1,0 +1,63 @@
+<footer class="py-5 position-relative">
+  <div class="container">
+    <div class="glass-panel p-4 p-md-5 d-flex flex-column gap-4">
+      
+      <!-- Apple Footer Top Row -->
+      <div class="row g-4">
+        <!-- Brand Column -->
+        <div class="col-lg-5 col-12">
+          <a href="#hero" class="d-flex align-items-center gap-2 text-decoration-none mb-3">
+            <span class="apple-brand-symbol d-inline-flex align-items-center justify-content-center">R</span>
+            <span class="fw-bold text-headings fs-5 tracking-tight">Rajdip Ghosh</span>
+          </a>
+          <p class="text-muted fs-7 mb-0 max-w-sm">
+            Senior Software Engineer specializing in Angular (v6-20), Node.js, Nx Monorepo, AG Grid, and high-concurrency enterprise FinTech systems.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="col-lg-4 col-6">
+          <span class="apple-eyebrow mb-2 d-block">Navigation</span>
+          <ul class="list-unstyled d-flex flex-column gap-2 m-0 p-0 fs-7">
+            <li><a href="#hero" class="text-muted text-decoration-none hover-white">Overview</a></li>
+            <li><a href="#skills" class="text-muted text-decoration-none hover-white">Technical Ecosystem</a></li>
+            <li><a href="#experience" class="text-muted text-decoration-none hover-white">Experience &amp; Provenance</a></li>
+            <li><a href="#projects" class="text-muted text-decoration-none hover-white">Featured Work</a></li>
+            <li><a href="#contact" class="text-muted text-decoration-none hover-white">Direct Inquiry</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect Column -->
+        <div class="col-lg-3 col-6">
+          <span class="apple-eyebrow mb-2 d-block">Connect</span>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <a [href]="profile.linkedin" target="_blank" rel="noopener noreferrer" class="apple-social-circle" aria-label="LinkedIn" title="LinkedIn">
+              <i class="uil uil-linkedin-alt"></i>
+            </a>
+            <a [href]="profile.github" target="_blank" rel="noopener noreferrer" class="apple-social-circle" aria-label="GitHub" title="GitHub">
+              <i class="uil uil-github-alt"></i>
+            </a>
+            <a [href]="profile.twitter" target="_blank" rel="noopener noreferrer" class="apple-social-circle" aria-label="Twitter" title="Twitter">
+              <i class="uil uil-twitter-alt"></i>
+            </a>
+            <a [href]="'mailto:' + profile.email" class="apple-social-circle" aria-label="Email" title="Email">
+              <i class="uil uil-envelope-alt"></i>
+            </a>
+          </div>
+          <div class="text-secondary fs-8"><i class="uil uil-map-marker me-1"></i> {{ profile.location }}</div>
+        </div>
+      </div>
+
+      <!-- Apple Footer Bottom Bar -->
+      <div class="pt-3 border-top border-secondary border-opacity-25 d-flex flex-wrap justify-content-between align-items-center gap-2 fs-8 text-muted">
+        <div>
+          &copy; {{ currentYear }} <strong class="text-headings">Rajdip Ghosh</strong>. All rights reserved.
+        </div>
+        <button class="btn btn-sm btn-apple-secondary rounded-circle p-2 d-inline-flex align-items-center justify-content-center" (click)="scrollToTop()" aria-label="Back to top" title="Scroll to top" style="width: 36px; height: 36px;">
+          <i class="uil uil-arrow-up text-headings"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</footer>

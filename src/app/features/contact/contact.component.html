@@ -1,0 +1,161 @@
+<section id="contact" class="section">
+  <div class="container">
+    
+    <!-- Apple Eyebrow & Title Header -->
+    <div class="text-center mb-4">
+      <span class="apple-eyebrow">Get In Touch</span>
+      <h2 class="section-title">Let's build something extraordinary.</h2>
+      <p class="section-subtitle mx-auto">
+        Open to senior engineering opportunities, technical consulting, and high-scale architecture discussions.
+      </p>
+    </div>
+
+    <!-- Apple Grid Row -->
+    <div class="row g-4 align-items-stretch">
+      
+      <!-- Left Column: Direct Contacts & Apple Cal Scheduler (Bootstrap col-lg-5) -->
+      <div class="col-lg-5 col-12">
+        <div class="d-flex flex-column gap-3 h-100">
+          
+          <!-- Direct Email Card -->
+          <div class="glass-panel p-4 d-flex align-items-center justify-content-between cursor-pointer" (click)="copyEmail()" title="Click to copy email">
+            <div class="d-flex align-items-center gap-3">
+              <div class="apple-contact-icon d-flex align-items-center justify-content-center rounded-circle">
+                <i class="uil uil-envelope-alt fs-5"></i>
+              </div>
+              <div>
+                <span class="apple-eyebrow mb-0 d-block fs-8">Direct Email</span>
+                <strong class="text-headings fs-7">{{ profile.email }}</strong>
+              </div>
+            </div>
+            <span class="apple-status-pill fs-8">
+              <i [class]="copied() ? 'uil uil-check' : 'uil uil-copy'"></i> {{ copied() ? 'Copied' : 'Copy' }}
+            </span>
+          </div>
+
+          <!-- Phone Card -->
+          <a [href]="'tel:' + profile.phone" class="glass-panel p-4 d-flex align-items-center justify-content-between text-decoration-none">
+            <div class="d-flex align-items-center gap-3">
+              <div class="apple-contact-icon d-flex align-items-center justify-content-center rounded-circle">
+                <i class="uil uil-phone fs-5"></i>
+              </div>
+              <div>
+                <span class="apple-eyebrow mb-0 d-block fs-8">Phone &amp; WhatsApp</span>
+                <strong class="text-headings fs-7">{{ profile.phone }}</strong>
+              </div>
+            </div>
+            <i class="uil uil-arrow-up-right text-muted fs-5"></i>
+          </a>
+
+          <!-- Location Card -->
+          <div class="glass-panel p-4 d-flex align-items-center gap-3">
+            <div class="apple-contact-icon d-flex align-items-center justify-content-center rounded-circle">
+              <i class="uil uil-map-marker-alt fs-5"></i>
+            </div>
+            <div>
+              <span class="apple-eyebrow mb-0 d-block fs-8">Primary Hubs</span>
+              <strong class="text-headings fs-7">{{ profile.location }}</strong>
+            </div>
+          </div>
+
+          <!-- Instant Scheduler Card -->
+          <div class="glass-panel p-4 d-flex flex-column gap-3 mt-auto apple-cal-card">
+            <div class="d-flex align-items-start gap-3">
+              <i class="uil uil-calendar-alt fs-3 apple-blue-text"></i>
+              <div>
+                <h3 class="fs-6 fw-bold text-headings mb-1">Book a 1:1 Intro Call</h3>
+                <p class="text-muted fs-8 mb-0">Direct 1-on-1 discussion on project roadmaps or technical roles.</p>
+              </div>
+            </div>
+            <button 
+              class="btn-apple-primary w-100 py-2 fs-8" 
+              data-cal-link="rajdipghosh/call" 
+              data-cal-namespace="call" 
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+              (click)="openCal()">
+              <i class="uil uil-calendar-alt"></i>
+              <span>Open Instant Scheduler</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Apple Form (Bootstrap col-lg-7) -->
+      <div class="col-lg-7 col-12">
+        <div class="glass-panel p-4 p-md-5 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h3 class="fs-4 fw-bold text-headings mb-1">Send a Direct Message</h3>
+            <p class="text-muted fs-7 mb-4">Fill in your requirements and I will respond within 24 hours.</p>
+
+            <form (ngSubmit)="sendMessage()" class="d-flex flex-column gap-3">
+              <div class="row g-3">
+                <div class="col-md-6 col-12">
+                  <label for="name" class="apple-eyebrow mb-1 d-block">Your Name</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    [(ngModel)]="formData.name" 
+                    required 
+                    placeholder="Sarah Jenkins"
+                    class="form-control apple-input" />
+                </div>
+
+                <div class="col-md-6 col-12">
+                  <label for="email" class="apple-eyebrow mb-1 d-block">Your Email</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    [(ngModel)]="formData.email" 
+                    required 
+                    placeholder="sarah@company.com"
+                    class="form-control apple-input" />
+                </div>
+              </div>
+
+              <div>
+                <label for="subject" class="apple-eyebrow mb-1 d-block">Subject</label>
+                <input 
+                  type="text" 
+                  id="subject" 
+                  name="subject" 
+                  [(ngModel)]="formData.subject" 
+                  required 
+                  placeholder="Senior Angular Opportunity / Consultation"
+                  class="form-control apple-input" />
+              </div>
+
+              <div>
+                <label for="message" class="apple-eyebrow mb-1 d-block">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  [(ngModel)]="formData.message" 
+                  rows="4" 
+                  required 
+                  placeholder="Describe your role or project roadmap..."
+                  class="form-control apple-input"></textarea>
+              </div>
+
+              @if (formSuccess()) {
+                <div class="alert alert-dark border border-secondary border-opacity-25 text-headings fs-8 py-2 px-3 rounded-3 d-flex align-items-center gap-2">
+                  <i class="uil uil-check-circle apple-blue-text"></i>
+                  <span>Opening your email client to send message...</span>
+                </div>
+              }
+
+              <button type="submit" class="btn-apple-primary align-self-start px-4 py-2 mt-2 fs-8 btn-contact-submit">
+                <span>Send Message</span>
+                <i class="uil uil-message"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

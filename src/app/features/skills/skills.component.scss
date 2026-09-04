@@ -1,0 +1,317 @@
+.fs-7 { font-size: 0.825rem; }
+.fs-8 { font-size: 0.75rem; }
+
+/* Honeycomb Container & Edge Fade Masks */
+.honeycomb-container {
+  user-select: none;
+}
+
+.honeycomb-fade-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  background: linear-gradient(90deg, var(--bg-dark) 0%, transparent 100%);
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.honeycomb-fade-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  background: linear-gradient(270deg, var(--bg-dark) 0%, transparent 100%);
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.honeycomb-viewport {
+  position: relative;
+  /* Generous vertical clearance for 1.25x magnification without clipping */
+  padding: 32px 0 36px 0;
+  isolation: isolate;
+}
+
+/* Mathematically True Honeycomb Geometry:
+   - Hexagon Width: 120px
+   - Hexagon Height: 139px
+   - Uniform Gap: 10px on all 6 edges
+   - Horizontal spacing delta_X: 120 + 10 = 130px
+   - Row 2 stagger offset: 130 / 2 = 65px
+   - Vertical center-to-center delta_Y: (sqrt(3)/2) * 130 = 112.58px
+   - Row overlap margin-top: -(139 - 112.58) = -26.4px (~ -26px)
+   => Result: Every edge has an identical 10px clearance!
+*/
+.honeycomb-row {
+  /* Overflow visible prevents clipping of elevated hexagons */
+  overflow: visible;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  /* CRITICAL: pointer-events none ensures transparent track areas never block hexagons in adjacent rows */
+  pointer-events: none;
+  /* Smooth z-index step: instantaneous on hover, delayed until shrink completes on unhover */
+  transition: z-index 0s 0.28s;
+}
+
+.honeycomb-row.row-2 {
+  margin-top: -26px;
+  z-index: 2;
+}
+
+.honeycomb-row.row-3 {
+  margin-top: -26px;
+  z-index: 3;
+}
+
+/* When any row contains a hovered hexagon, instantly float that entire row above all others */
+.honeycomb-row:hover,
+.honeycomb-row:has(.hex-node:hover) {
+  z-index: 100 !important;
+  transition: z-index 0s;
+}
+
+.honeycomb-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  overflow: visible;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.track-staggered {
+  margin-left: -65px;
+}
+
+/* Hover Pause: smoothly pauses track on container enter */
+.honeycomb-container:hover .honeycomb-track,
+.motion-paused .honeycomb-track {
+  animation-play-state: paused !important;
+}
+
+/* Synchronized Honeycomb Glide:
+   All rows glide synchronously at the exact same rate so the interlocking geometry is 100% preserved.
+*/
+.unified-glide {
+  animation: unifiedHoneycombGlide 38s linear infinite;
+}
+
+@keyframes unifiedHoneycombGlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Hexagon Node Architecture with Hitbox Isolation:
+   - .hex-node is the 100% STATIC hit target and flex spacer (NEVER transforms).
+   - .hex-inner is the visual card (transforms freely without moving hit boundaries).
+   - Result: ZERO hover loop oscillation, ZERO cursor trap, 100% silky smooth.
+*/
+.hex-node {
+  position: relative;
+  width: 120px;
+  height: 139px;
+  flex-shrink: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 1;
+  /* Delay dropping z-index on unhover until shrink animation completes */
+  transition: z-index 0s 0.28s;
+}
+
+/* When hovered, elevate the active node immediately */
+.hex-node:hover {
+  z-index: 100 !important;
+  transition: z-index 0s;
+}
+
+/* Elevate adjacent neighbors slightly */
+.hex-node:hover + .hex-node,
+.hex-node:has(+ .hex-node:hover) {
+  z-index: 50 !important;
+  transition: z-index 0s;
+}
+
+/* Visual Card that transforms smoothly with Apple dock magnification */
+.hex-inner {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform-origin: center center;
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.3, 1),
+              filter 0.28s ease;
+  will-change: transform;
+}
+
+.hex-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.28));
+  transition: filter 0.24s ease;
+}
+
+.hex-polygon-bg {
+  fill: var(--bg-card);
+  transition: fill 0.2s ease;
+}
+
+.hex-polygon-border {
+  fill: none;
+  stroke: var(--glass-border);
+  stroke-width: 1.2;
+  transition: stroke 0.2s ease, stroke-width 0.2s ease;
+}
+
+.hex-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.5rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.hex-icon {
+  margin-bottom: 0.35rem;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hex-name {
+  font-size: 0.735rem;
+  font-weight: 600;
+  color: var(--text-headings);
+  line-height: 1.18;
+  max-width: 92px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.hex-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-pill);
+  background: var(--bg-badge);
+  border: 1px solid var(--glass-border-light);
+  color: var(--text-muted);
+  font-size: 0.585rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ==========================================================================
+   macOS DOCK WAVE MAGNIFICATION — ISOLATED HITBOX & ZERO-JITTER
+   ========================================================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  /* Level 0: Active Target Node */
+  .hex-node:hover .hex-inner {
+    transform: translate3d(0, -8px, 0) scale(1.18);
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.45));
+  }
+
+  .hex-node:hover .hex-polygon-bg {
+    fill: var(--bg-card-hover);
+  }
+
+  .hex-node:hover .hex-polygon-border {
+    stroke: var(--apple-blue);
+    stroke-width: 2.4;
+  }
+
+  .hex-node:hover .hex-icon {
+    transform: scale(1.2);
+  }
+
+  .hex-node:hover .hex-name {
+    color: var(--apple-blue-hover, #2997ff);
+    font-weight: 700;
+  }
+
+  .hex-node:hover .hex-badge {
+    background: rgba(0, 113, 227, 0.18);
+    color: #2997ff;
+    border-color: rgba(0, 113, 227, 0.45);
+  }
+
+  /* Level 1: Immediate Neighbors (±1) */
+  .hex-node:hover + .hex-node .hex-inner,
+  .hex-node:has(+ .hex-node:hover) .hex-inner {
+    transform: translate3d(0, -3px, 0) scale(1.06);
+  }
+
+  .hex-node:hover + .hex-node .hex-polygon-border,
+  .hex-node:has(+ .hex-node:hover) .hex-polygon-border {
+    stroke: rgba(0, 113, 227, 0.4);
+    stroke-width: 1.5;
+  }
+
+  .hex-node:hover + .hex-node .hex-icon,
+  .hex-node:has(+ .hex-node:hover) .hex-icon {
+    transform: scale(1.08);
+  }
+}
+
+/* ==========================================================================
+   TABLET & MOBILE RESPONSIVE SCALING
+   ========================================================================== */
+.honeycomb-container {
+  touch-action: pan-y pinch-zoom;
+}
+
+@media (max-width: 767.98px) {
+  .honeycomb-container {
+    padding: 1.25rem 0.5rem !important;
+  }
+
+  .honeycomb-viewport {
+    transform: scale(0.86);
+    transform-origin: center center;
+    margin: -1.5rem 0;
+  }
+
+  .honeycomb-fade-left,
+  .honeycomb-fade-right {
+    width: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .honeycomb-viewport {
+    transform: scale(0.78);
+    margin: -2.5rem 0;
+  }
+
+  .honeycomb-fade-left,
+  .honeycomb-fade-right {
+    width: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .border-md-start {
+    border-left: 1px solid var(--glass-border) !important;
+  }
+}
+

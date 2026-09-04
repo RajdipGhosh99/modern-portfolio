@@ -1,0 +1,65 @@
+.fs-7 { font-size: 0.85rem; }
+.fs-8 { font-size: 0.75rem; }
+.cursor-pointer { cursor: pointer; }
+
+.apple-contact-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--bg-chip);
+  border: 1px solid var(--glass-border-subtle);
+  color: var(--text-headings);
+  flex-shrink: 0;
+}
+
+.apple-cal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+}
+
+.apple-input {
+  background: var(--bg-glass-input) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--text-headings) !important;
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.95rem;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.apple-input:focus {
+  background: var(--bg-glass-input-focus) !important;
+  border-color: var(--apple-blue) !important;
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.2) !important;
+  outline: none;
+}
+
+.apple-input::placeholder {
+  color: var(--text-dim) !important;
+}
+
+/* ==========================================================================
+   TABLET & MOBILE RESPONSIVE CONTACT
+   ========================================================================== */
+.glass-panel.cursor-pointer,
+a.glass-panel {
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+
+  &:active {
+    transform: scale(0.985);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .btn-contact-submit {
+    width: 100% !important;
+    justify-content: center;
+    min-height: 48px;
+    font-size: 0.95rem !important;
+  }
+
+  .apple-input {
+    padding: 0.75rem 1rem;
+    font-size: 16px !important;
+  }
+}
+
