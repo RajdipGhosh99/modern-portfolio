@@ -44,13 +44,12 @@
             <div class="position-relative project-thumb-wrapper overflow-hidden">
               @if (project.imageUrl) {
                 <picture>
-                  <source [srcset]="project.imageUrl" type="image/avif" />
-                  <source [srcset]="getPngFallback(project.imageUrl)" type="image/png" />
+                  <source [srcset]="getAvifUrl(project.imageUrl)" type="image/avif" />
+                  <source [srcset]="getPngUrl(project.imageUrl)" type="image/png" />
                   <img 
-                    [src]="getPngFallback(project.imageUrl)" 
+                    [src]="getPngUrl(project.imageUrl)" 
                     [alt]="project.title" 
                     class="project-img w-100 h-100 object-fit-cover" 
-                    loading="lazy" 
                     decoding="async"
                     width="400" 
                     height="190"

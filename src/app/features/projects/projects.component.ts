@@ -13,7 +13,7 @@ import { Project } from '../../core/models/portfolio.models';
 export class ProjectsComponent {
   allProjects = PROJECTS;
   selectedCategory = signal<string>('all');
-  showAllProjects = signal<boolean>(false);
+  showAllProjects = signal<boolean>(true);
 
   displayedProjects = computed<Project[]>(() => {
     const cat = this.selectedCategory();
@@ -38,9 +38,18 @@ export class ProjectsComponent {
     this.showAllProjects.update(v => !v);
   }
 
-  getPngFallback(url?: string): string {
+  getAvifUrl(url?: string): string {
+    if (!url) return '';
+    return url.replace(/\.(png|jpe?g)$/i, '.avif');
+  }
+
+  getPngUrl(url?: string): string {
     if (!url) return '';
     return url.replace(/\.avif$/i, '.png');
+  }
+
+  getPngFallback(url?: string): string {
+    return this.getPngUrl(url);
   }
 
   handleImageError(event: Event, project: Project): void {
@@ -53,7 +62,7 @@ export class ProjectsComponent {
       }
       if (!img.dataset['retried']) {
         img.dataset['retried'] = 'true';
-        img.src = this.getPngFallback(project.imageUrl) || '/assets/img/portfolio/gmap-clone.png';
+        img.src = this.getPngUrl(project.imageUrl);
       }
     }
   }
