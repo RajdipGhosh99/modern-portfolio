@@ -163,7 +163,7 @@ export const PROJECTS: Project[] = [
     description: 'Developed an internal funding management system for portfolio and capital allocation at Morgan Stanley, featuring AG Grid multi-tiered financial ledger tables, budget forecasting, and enterprise audit pipelines.',
     impact: 'Ensured compliance with enterprise UI performance, WCAG 2.1 AA accessibility standards, and sub-second updates for high-throughput capital allocations.',
     technologies: ['Angular', 'AG Grid', 'Nx Monorepo', 'Node.js', 'Express', 'TypeScript', 'SCSS', 'RxJS', 'Micro Frontends'],
-    imageUrl: '/assets/img/portfolio/meter.avif',
+    imageUrl: '/assets/img/portfolio/meter.png',
     isFeatured: true
   },
   {
@@ -174,7 +174,7 @@ export const PROJECTS: Project[] = [
     description: 'Built real-time dashboards for shipment monitoring and global logistics analytics. Designed real-time sensor streams and automated telemetry alerts for temperature, humidity, GPS location, and shock detection.',
     impact: 'Engineered responsive telemetry alerts with zero lag, providing end-to-end supply-chain visibility across multi-country routes.',
     technologies: ['Angular 17', 'Node.js', 'Express', 'Tailwind CSS', 'Python', 'WebSockets', 'RxJS'],
-    imageUrl: '/assets/img/portfolio/radial-bar.avif',
+    imageUrl: '/assets/img/portfolio/radial-bar.png',
     isFeatured: true
   },
   {
@@ -185,7 +185,7 @@ export const PROJECTS: Project[] = [
     description: 'Developed ERP features including condition-monitoring asset dashboards, role-based access control (RBAC), and workflow automation. Built dynamic forms capable of processing complex nested datasets efficiently.',
     impact: 'Slashed initial application load time by 70% with intelligent module lazy loading and optimized reactive caching.',
     technologies: ['Angular 16', 'Node.js', 'Express', 'Bootstrap', 'Python', 'RxJS', 'MongoDB'],
-    imageUrl: '/assets/img/portfolio/linear-bar.avif',
+    imageUrl: '/assets/img/portfolio/linear-bar.png',
     isFeatured: true
   },
   {
@@ -196,7 +196,7 @@ export const PROJECTS: Project[] = [
     description: 'A lightweight Google Maps clone using Angular, TypeScript, and Mapbox GL with panning, zooming, marker placement, polygon drawing, and geolocation, offering a responsive UI and smooth map interactions.',
     impact: 'Smooth 60 FPS vector map rendering with responsive spatial control panels.',
     technologies: ['Angular', 'TypeScript', 'Mapbox GL', 'SCSS', 'Geolocation API'],
-    imageUrl: '/assets/img/portfolio/gmap-clone.avif',
+    imageUrl: '/assets/img/portfolio/gmap-clone.png',
     demoUrl: 'https://google-maps-clone-chi.vercel.app',
     githubUrl: 'https://github.com/RajdipGhosh99/google-maps-clone',
     isFeatured: true
@@ -209,7 +209,7 @@ export const PROJECTS: Project[] = [
     description: 'A modern social media photo feed web app built with Angular, Firebase, and SCSS featuring user authentication, photo uploads, likes, and responsive design.',
     impact: 'Full user lifecycle with real-time Firebase Auth and Firestore syncing.',
     technologies: ['Angular', 'TypeScript', 'Firebase', 'SCSS', 'RxJS'],
-    imageUrl: '/assets/img/portfolio/instaclone.avif',
+    imageUrl: '/assets/img/portfolio/instaclone.png',
     demoUrl: 'https://finstagran.web.app/',
     githubUrl: 'https://github.com/RajdipGhosh99/finstagran',
     isFeatured: false
@@ -222,7 +222,7 @@ export const PROJECTS: Project[] = [
     description: 'The first iteration of my personal portfolio website, built with Angular and SCSS featuring smooth scrolling, interactive project showcases, and contact integration.',
     impact: 'Responsive multi-section layout that served as the foundation for modern web projects.',
     technologies: ['Angular', 'TypeScript', 'HTML5', 'SCSS', 'Bootstrap'],
-    imageUrl: '/assets/img/portfolio/studentcdc.avif',
+    imageUrl: '/assets/img/portfolio/studentcdc.png',
     demoUrl: environment.BASE_URL,
     githubUrl: 'https://github.com/RajdipGhosh99/portfolio',
     isFeatured: false
@@ -235,7 +235,7 @@ export const PROJECTS: Project[] = [
     description: 'Enterprise data analytics dashboard component library featuring custom charting, live sensor telemetry, and responsive control widgets designed for high-concurrency systems.',
     impact: 'Sub-second rendering performance for high-density tabular and graph displays.',
     technologies: ['Angular', 'TypeScript', 'RxJS', 'SCSS', 'Chart.js'],
-    imageUrl: '/assets/img/portfolio/stopwatch.avif',
+    imageUrl: '/assets/img/portfolio/stopwatch.png',
     isFeatured: false
   }
 ];

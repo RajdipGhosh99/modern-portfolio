@@ -5,7 +5,7 @@
  * - Stale-while-revalidate for static scripts, styles, and assets
  */
 
-const CACHE_NAME = 'rajdip-portfolio-v5';
+const CACHE_NAME = 'rajdip-portfolio-v6';
 
 const PRECACHE_ASSETS = [
   '/',
@@ -13,10 +13,25 @@ const PRECACHE_ASSETS = [
   '/favicon.ico',
   '/favicon.svg',
   '/apple-touch-icon.png',
+  '/assets/img/rajdip-avatar.avif',
   '/assets/img/rajdip-avatar.png',
   '/assets/img/og-preview.png',
   '/assets/img/PwaImages/android/android-launchericon-192-192.png',
-  '/assets/img/PwaImages/android/android-launchericon-512-512.png'
+  '/assets/img/PwaImages/android/android-launchericon-512-512.png',
+  '/assets/img/portfolio/meter.avif',
+  '/assets/img/portfolio/meter.png',
+  '/assets/img/portfolio/radial-bar.avif',
+  '/assets/img/portfolio/radial-bar.png',
+  '/assets/img/portfolio/linear-bar.avif',
+  '/assets/img/portfolio/linear-bar.png',
+  '/assets/img/portfolio/gmap-clone.avif',
+  '/assets/img/portfolio/gmap-clone.png',
+  '/assets/img/portfolio/instaclone.avif',
+  '/assets/img/portfolio/instaclone.png',
+  '/assets/img/portfolio/studentcdc.avif',
+  '/assets/img/portfolio/studentcdc.png',
+  '/assets/img/portfolio/stopwatch.avif',
+  '/assets/img/portfolio/stopwatch.png'
 ];
 
 self.addEventListener('install', (event) => {
@@ -64,18 +79,30 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Static assets: Stale-while-revalidate
+  // Static assets & images: Cache-first with background revalidation
   event.respondWith(
     caches.match(request).then((cachedResponse) => {
-      const fetchPromise = fetch(request).then((networkResponse) => {
+      if (cachedResponse) {
+        // Revalidate in background to keep cache fresh
+        fetch(request)
+          .then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+              const clone = networkResponse.clone();
+              caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+            }
+          })
+          .catch(() => {});
+        return cachedResponse;
+      }
+
+      // Not in cache: fetch from network and cache response
+      return fetch(request).then((networkResponse) => {
         if (networkResponse && networkResponse.status === 200) {
           const clone = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
         }
         return networkResponse;
-      }).catch(() => cachedResponse);
-
-      return cachedResponse || fetchPromise;
+      });
     })
   );
 });
