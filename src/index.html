@@ -50,6 +50,19 @@
     })();
   </script>
 
+  <!-- Critical Above-the-Fold Layout Styles (Zero Layout Shift / CLS 0) -->
+  <style>
+    *, ::after, ::before { box-sizing: border-box; }
+    body { margin: 0; }
+    .fixed-top { position: fixed; top: 0; right: 0; left: 0; z-index: 1030; }
+    .header-nav { height: 48px; }
+    .hero-section { padding: 5.5rem 0 3.5rem; position: relative; }
+    .apple-portrait-container { width: 270px; height: 270px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .apple-portrait-container picture { display: block; width: 100%; height: 100%; border-radius: 50%; }
+    .avatar-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+    .apple-device-frame { border-radius: 50%; padding: 8px; display: inline-flex; width: 286px; height: 286px; }
+  </style>
+
   <!-- Meta Description & High-Impact Keywords for Google Ranking -->
   <meta name="description" content="Senior Software Engineer with 5+ years of experience engineering high-concurrency web systems using Angular (v6-20), TypeScript, RxJS, NgRx, and Node.js. Consultant for Morgan Stanley and DS Smith." />
   <meta name="keywords" content="Rajdip Ghosh, Senior Software Engineer, Senior Angular Developer, Angular Node.js Developer, Angular Specialist, AG Grid Architect, Nx Monorepo, Micro Frontend Architecture, Spec-Driven Development, Prompt Engineering, GitHub Copilot Claude Code, TypeScript, RxJS, NgRx, Node.js, Express, Morgan Stanley Consultant, DS Smith ParceLive, Angular 20 SSR, Full-Stack Developer Bengaluru India, Web Performance Optimization" />
