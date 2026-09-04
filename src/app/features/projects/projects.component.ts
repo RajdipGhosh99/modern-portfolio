@@ -37,4 +37,24 @@ export class ProjectsComponent {
   toggleExpand(): void {
     this.showAllProjects.update(v => !v);
   }
+
+  getPngFallback(url?: string): string {
+    if (!url) return '';
+    return url.replace(/\.avif$/i, '.png');
+  }
+
+  handleImageError(event: Event, project: Project): void {
+    const img = event.target as HTMLImageElement;
+    if (img) {
+      const picture = img.closest('picture');
+      if (picture) {
+        const sources = picture.querySelectorAll('source');
+        sources.forEach(s => s.remove());
+      }
+      if (!img.dataset['retried']) {
+        img.dataset['retried'] = 'true';
+        img.src = this.getPngFallback(project.imageUrl) || '/assets/img/portfolio/gmap-clone.png';
+      }
+    }
+  }
 }

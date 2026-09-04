@@ -43,7 +43,19 @@
             <!-- Project Image Showcase -->
             <div class="position-relative project-thumb-wrapper overflow-hidden">
               @if (project.imageUrl) {
-                <img [src]="project.imageUrl" [alt]="project.title" class="project-img w-100 h-100 object-fit-cover" loading="lazy" width="400" height="190" />
+                <picture>
+                  <source [srcset]="project.imageUrl" type="image/avif" />
+                  <source [srcset]="getPngFallback(project.imageUrl)" type="image/png" />
+                  <img 
+                    [src]="getPngFallback(project.imageUrl)" 
+                    [alt]="project.title" 
+                    class="project-img w-100 h-100 object-fit-cover" 
+                    loading="lazy" 
+                    decoding="async"
+                    width="400" 
+                    height="190"
+                    (error)="handleImageError($event, project)" />
+                </picture>
               } @else {
                 <div class="w-100 h-100 d-flex align-items-center justify-content-center bg-dark text-secondary">
                   <i class="uil uil-window-grid fs-2"></i>
