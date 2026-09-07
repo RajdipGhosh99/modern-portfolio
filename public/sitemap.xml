@@ -9,6 +9,15 @@
     <lastmod>2026-09-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://rajdipghosh.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://rajdipghosh.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://rajdipghosh.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://rajdipghosh.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://rajdipghosh.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en-DE" href="https://rajdipghosh.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en-SG" href="https://rajdipghosh.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://rajdipghosh.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rajdipghosh.vercel.app/" />
     <image:image>
       <image:loc>https://rajdipghosh.vercel.app/assets/img/rajdip-avatar.webp</image:loc>
       <image:title>Rajdip Ghosh - Senior Software Engineer &amp; Top Angular Developer India</image:title>

@@ -4,7 +4,9 @@
 
 - Full Name: Rajdip Ghosh
 - Profession: Senior Software Engineer / Full-Stack & Frontend Architect
-- Geographic Provenance: Kolkata, West Bengal, India & Bengaluru, Karnataka, India
+- Geographic Hubs: Bengaluru, Karnataka (Silicon Valley of India) & Kolkata, West Bengal, India
+- Global Service Reach: Worldwide (United States, United Kingdom, Europe, Canada, Australia, Singapore, UAE)
+- Timezone Overlap: Full overlap with US (EST/CST/PST), UK (GMT), European (CET), and APAC hours
 - Experience: 5+ Years in Tier-1 Enterprise & High-Concurrency Systems
 - Specialization: Angular (v6-20), TypeScript, RxJS, NgRx, AG Grid, Nx Monorepo, Node.js, Express, Manifest V3 Chrome Extensions
 - Availability: Open to Senior Roles, Architecture Consulting, and Contract Engagements at Competitive, Affordable Low Rates ($25–$45/hr)
