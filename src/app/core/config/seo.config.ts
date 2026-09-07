@@ -41,25 +41,25 @@ export interface SeoConfig {
 }
 
 export const DEFAULT_SEO_CONFIG: SeoConfig = {
-  title: 'Rajdip Ghosh | Senior Software Engineer - Angular & Node.js Specialist',
-  description: 'Senior Software Engineer with 5+ years of experience engineering high-concurrency web systems using Angular (v6-20), TypeScript, RxJS, NgRx, and Node.js. Consultant for Morgan Stanley and DS Smith.',
-  keywords: 'Rajdip Ghosh, Senior Software Engineer, Senior Angular Developer, Angular Node.js Developer, Angular Specialist, AG Grid Architect, Nx Monorepo, Micro Frontend Architecture, Spec-Driven Development, Prompt Engineering, GitHub Copilot Claude Code, TypeScript, RxJS, NgRx, Node.js, Express, Morgan Stanley Consultant, DS Smith ParceLive, Angular 20 SSR, Full-Stack Developer Bengaluru India, Web Performance Optimization',
+  title: "Rajdip Ghosh | India's Best Angular & Full-Stack Developer - Affordable Low Rates",
+  description: "Ranked among India's best software developers & top Angular/Node.js specialists. 5+ years enterprise experience (Morgan Stanley, DS Smith) available at competitive, affordable low rates for freelance consulting, contract, and full-stack engineering.",
+  keywords: "indias best developer, best developer in india, best software engineer india, best angular developer in india, top angular developer india, best full stack developer in india, best nodejs developer in india, low rate developer, affordable developer india, hire developer low rate, cheap developer high quality, low cost freelance developer, affordable angular developer, budget friendly software engineer, hire indian developer low rate, hire remote developer india, freelance developer india, Rajdip Ghosh, Senior Software Engineer, Senior Angular Developer, Angular Node.js Developer, AG Grid Architect, Nx Monorepo, Micro Frontend Architecture, Morgan Stanley Consultant, DS Smith ParceLive, Web Performance Optimization, Full-Stack Developer Bengaluru",
   author: 'Rajdip Ghosh',
   canonicalUrl: `${environment.BASE_URL}/`,
   robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   themeColor: '#070b14',
   
   ogType: 'website',
-  ogTitle: 'Rajdip Ghosh | Senior Software Engineer - Angular & Node.js Specialist',
-  ogDescription: '5+ years engineering high-concurrency web systems, AG Grid financial ledgers, and resilient Node.js APIs across Morgan Stanley and DS Smith.',
+  ogTitle: "Rajdip Ghosh | India's Best Angular & Full-Stack Developer - Affordable Low Rates",
+  ogDescription: "Ranked among India's best software developers & top Angular/Node.js specialists. 5+ years enterprise experience (Morgan Stanley, DS Smith) available at competitive, affordable low rates.",
   ogImage: `${environment.BASE_URL}/assets/img/og-preview.png`,
-  ogImageAlt: 'Rajdip Ghosh - Senior Software Engineer',
+  ogImageAlt: 'Rajdip Ghosh - Senior Software Engineer & Full-Stack Consultant',
   ogUrl: `${environment.BASE_URL}/`,
   ogSiteName: 'Rajdip Ghosh Portfolio',
 
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Rajdip Ghosh | Senior Software Engineer - Angular & Node.js Specialist',
-  twitterDescription: 'Senior Software Engineer with 5+ years engineering high-concurrency web systems, AG Grid financial ledgers, and resilient Node.js APIs across Morgan Stanley and DS Smith.',
+  twitterTitle: "Rajdip Ghosh | India's Best Angular & Full-Stack Developer - Affordable Low Rates",
+  twitterDescription: "Ranked among India's best software developers & top Angular/Node.js specialists. 5+ years enterprise experience available at competitive, affordable low rates.",
   twitterImage: `${environment.BASE_URL}/assets/img/og-preview.png`,
   twitterCreator: '@raazdeepghosh',
   twitterSite: '@raazdeepghosh',
@@ -68,14 +68,17 @@ export const DEFAULT_SEO_CONFIG: SeoConfig = {
     { name: 'application-name', content: 'Rajdip Ghosh Portfolio' },
     { name: 'apple-mobile-web-app-title', content: 'Rajdip Ghosh' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }
+    { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+    { name: 'classification', content: 'Software Engineering, Full Stack Web Development, IT Consulting, Freelance Development' },
+    { name: 'category', content: 'Software Engineering & Web Development' }
   ],
 
   jsonLd: {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Rajdip Ghosh',
-    jobTitle: 'Senior Software Engineer',
+    jobTitle: 'Senior Software Engineer & Full-Stack Consultant',
+    description: "Ranked among India's best software developers with 5+ years of experience engineering high-concurrency web applications using Angular (v6-20), Node.js, Express, and TypeScript. Available for enterprise and freelance roles at competitive, affordable low rates.",
     worksFor: {
       '@type': 'Organization',
       name: 'Accolite Digital',
@@ -104,6 +107,8 @@ export const DEFAULT_SEO_CONFIG: SeoConfig = {
       'Node.js & Express RESTful APIs',
       'FinTech & Capital Ledger Systems',
       'Web Performance & Web Vitals Optimization',
+      'Affordable Web Development',
+      'Enterprise Consulting at Low Rates',
       'WCAG 2.1 AA Accessibility',
       'Jasmine & Karma Testing'
     ],

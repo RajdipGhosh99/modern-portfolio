@@ -4,12 +4,12 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://rajdipghosh.vercel.app/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://rajdipghosh.vercel.app/assets/img/rajdip-avatar.png</image:loc>
-      <image:title>Rajdip Ghosh - Senior Software Engineer</image:title>
+      <image:title>Rajdip Ghosh - India's Best Angular &amp; Full-Stack Developer</image:title>
       <image:caption>Rajdip Ghosh Portfolio Picture</image:caption>
     </image:image>
   </url>

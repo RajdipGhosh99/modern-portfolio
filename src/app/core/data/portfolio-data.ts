@@ -4,21 +4,22 @@ import { environment } from '../../../environments/environment';
 export const PORTFOLIO_PROFILE: Profile = {
   name: 'Rajdip',
   fullName: 'Rajdip Ghosh',
-  title: 'Senior Software Engineer | Angular & Full-Stack Node.js Specialist',
+  title: 'Senior Software Engineer | India’s Top Angular & Full-Stack Specialist',
   roles: [
     'Senior Software Engineer',
-    'Angular & Node.js Specialist',
+    'India’s Top Angular & Full-Stack Developer',
+    'Affordable Enterprise & Freelance Consultant',
     'Enterprise UI & AG Grid Architect',
     'Micro Frontends & Nx Monorepos',
     'AI-Assisted & Spec-Driven Developer'
   ],
-  bio: 'Senior Software Engineer with 5 years of experience building scalable, high-performance web systems and resilient APIs using Angular (v6-20), Node.js, Express, and TypeScript. Strong expertise in component architecture, AG Grid financial tables, Nx monorepos, and reactive RxJS/NgRx state management. Proven ability to optimize performance, accelerate velocity with AI workflows (GitHub Copilot / Claude Code), and deliver mission-critical platforms within Agile teams.',
+  bio: 'Ranked among India\'s best software developers and top Angular/Node.js specialists with 5+ years of experience building scalable, high-performance web systems and resilient APIs across Morgan Stanley and DS Smith. Available for enterprise architecture consulting and freelance engagements at competitive, affordable low rates.',
   detailedBio: [
-    'Senior Software Engineer with 5 years of experience engineering high-concurrency enterprise web applications and resilient backend services using Angular (v6-20), Node.js, Express, and TypeScript.',
+    'Ranked among India\'s best software developers with 5+ years of experience engineering high-concurrency enterprise web applications and resilient backend services using Angular (v6-20), Node.js, Express, and TypeScript.',
     'Deep expertise in enterprise UI architecture: Angular Signals, standalone component APIs, RxJS declarative streaming, NgRx state management, AG Grid financial tables, and Nx monorepo workspaces.',
     'Consultant for Morgan Stanley at Accolite, engineering high-concurrency financial funding management systems (PPM) adhering to tier-1 enterprise latency, WCAG 2.1 AA accessibility, and bank-grade security protocols.',
     'Spearheading modern development workflows including Spec-Driven Development (OpenAPI contracts), Prompt Engineering, and AI-assisted pair programming with GitHub Copilot and Claude Code to accelerate velocity without regressions.',
-    'Demonstrated track record of cutting initial application load time by 70% at Xempla through intelligent routing, module lazy loading, and fine-grained change detection optimization.'
+    'Demonstrated track record of cutting initial application load time by 70% at Xempla through intelligent routing, module lazy loading, and fine-grained change detection optimization. Available at competitive, affordable low rates for freelance and contract consulting.'
   ],
   yearsExperience: '5+',
   projectsCompleted: '14+',
@@ -31,9 +32,9 @@ export const PORTFOLIO_PROFILE: Profile = {
   twitter: 'https://twitter.com/raazdeepghosh',
   calLink: 'rajdipghosh/call',
   resumeDriveUrl: 'https://drive.google.com/file/d/1uoW25tZkKXVFz6WTiE_7IC-qhiR3QDJU/view?usp=sharing',
-  avatarUrl: '/assets/img/rajdip-avatar.avif',
-  blobAvatarUrl: '/assets/img/rajdip-avatar.avif',
-  status: 'Open to New Opportunities'
+  avatarUrl: '/assets/img/rajdip-avatar.webp',
+  blobAvatarUrl: '/assets/img/rajdip-avatar.webp',
+  status: 'Open to Opportunities & Consulting'
 };
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
