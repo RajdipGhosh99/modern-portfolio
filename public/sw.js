@@ -5,7 +5,7 @@
  * - Stale-while-revalidate for static scripts, styles, and assets
  */
 
-const CACHE_NAME = 'rajdip-portfolio-v6';
+const CACHE_NAME = 'rajdip-portfolio-v7';
 
 const PRECACHE_ASSETS = [
   '/',
@@ -13,24 +13,26 @@ const PRECACHE_ASSETS = [
   '/favicon.ico',
   '/favicon.svg',
   '/apple-touch-icon.png',
-  '/assets/img/rajdip-avatar.avif',
+  '/assets/img/rajdip-avatar.webp',
   '/assets/img/rajdip-avatar.png',
   '/assets/img/og-preview.png',
   '/assets/img/PwaImages/android/android-launchericon-192-192.png',
   '/assets/img/PwaImages/android/android-launchericon-512-512.png',
-  '/assets/img/portfolio/meter.avif',
+  '/assets/img/portfolio/chrome-extension.webp',
+  '/assets/img/portfolio/chrome-extension.png',
+  '/assets/img/portfolio/meter.webp',
   '/assets/img/portfolio/meter.png',
-  '/assets/img/portfolio/radial-bar.avif',
+  '/assets/img/portfolio/radial-bar.webp',
   '/assets/img/portfolio/radial-bar.png',
-  '/assets/img/portfolio/linear-bar.avif',
+  '/assets/img/portfolio/linear-bar.webp',
   '/assets/img/portfolio/linear-bar.png',
-  '/assets/img/portfolio/gmap-clone.avif',
+  '/assets/img/portfolio/gmap-clone.webp',
   '/assets/img/portfolio/gmap-clone.png',
-  '/assets/img/portfolio/instaclone.avif',
+  '/assets/img/portfolio/instaclone.webp',
   '/assets/img/portfolio/instaclone.png',
-  '/assets/img/portfolio/studentcdc.avif',
+  '/assets/img/portfolio/studentcdc.webp',
   '/assets/img/portfolio/studentcdc.png',
-  '/assets/img/portfolio/stopwatch.avif',
+  '/assets/img/portfolio/stopwatch.webp',
   '/assets/img/portfolio/stopwatch.png'
 ];
 

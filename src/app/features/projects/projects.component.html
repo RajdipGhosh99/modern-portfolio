@@ -47,6 +47,7 @@
                   [src]="project.imageUrl" 
                   [alt]="project.title" 
                   class="project-img w-100 h-100 object-fit-cover" 
+                  loading="lazy"
                   decoding="async"
                   width="400" 
                   height="190" />
@@ -58,7 +59,7 @@
               
               <!-- Apple Pill Badge -->
               <span class="position-absolute top-0 end-0 m-3 apple-status-pill fs-8">
-                {{ project.category === 'enterprise' ? 'Enterprise' : 'Full Stack' }}
+                {{ project.id === 'live-train-delay-tracker' ? 'Chrome Extension' : (project.category === 'enterprise' ? 'Enterprise' : 'Full Stack') }}
               </span>
             </div>
 
@@ -89,7 +90,7 @@
               <div class="pt-3 mt-auto border-top border-secondary border-opacity-25 d-flex align-items-center gap-3">
                 @if (project.demoUrl) {
                   <a [href]="project.demoUrl" target="_blank" rel="noopener noreferrer" class="apple-link fs-7">
-                    <span>Live Demo</span>
+                    <span>{{ project.id === 'live-train-delay-tracker' ? 'Edge Store' : 'Live Demo' }}</span>
                     <i class="uil uil-angle-right-b fs-6"></i>
                   </a>
                 }
