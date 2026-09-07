@@ -69,10 +69,21 @@ export const DEFAULT_SEO_CONFIG: SeoConfig = {
     { name: 'apple-mobile-web-app-title', content: 'Rajdip Ghosh' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-    { name: 'classification', content: 'Software Engineering, Full Stack Web Development, IT Consulting, Freelance Development' },
+    { name: 'audience', content: 'Global Recruiters, Technical Recruiters, Hiring Managers, CTOs, VPs of Engineering, Engineering Directors, Startup Founders, CEOs, Enterprise Clients, Product Managers, Outsourcing Agencies' },
+    { name: 'target', content: 'Technical Recruiters, Talent Acquisition, CTOs, Engineering Managers, Tech Founders, Enterprise Clients' },
+    { name: 'subject', content: 'Senior Software Engineering, Enterprise Angular Consulting, Full-Stack Architecture, Remote Engineering, Offshore Software Development' },
+    { name: 'topic', content: 'Angular 20 Architecture, AG Grid Enterprise, Full-Stack Node.js, Micro Frontends, Cloud APIs, Performance Optimization, Low Rate Offshore Engineering' },
+    { name: 'classification', content: 'Software Engineering, Full Stack Web Development, IT Consulting, Freelance Development, Remote Engineering, Offshore Software Development' },
     { name: 'category', content: 'Software Engineering & Web Development' },
     { name: 'coverage', content: 'Worldwide' },
-    { name: 'distribution', content: 'Global' }
+    { name: 'distribution', content: 'Global' },
+    { name: 'author', content: 'Rajdip Ghosh' },
+    { name: 'designer', content: 'Rajdip Ghosh' },
+    { name: 'owner', content: 'Rajdip Ghosh' },
+    { name: 'copyright', content: 'Rajdip Ghosh' },
+    { name: 'reply-to', content: 'raazdeepghosh@gmail.com' },
+    { name: 'identifier-URL', content: `${environment.BASE_URL}/` },
+    { name: 'url', content: `${environment.BASE_URL}/` }
   ],
 
   jsonLd: {
@@ -81,6 +92,16 @@ export const DEFAULT_SEO_CONFIG: SeoConfig = {
     name: 'Rajdip Ghosh',
     jobTitle: 'Senior Software Engineer & Global Full-Stack Consultant',
     description: "Ranked among India's best software developers with 5+ years of experience engineering high-concurrency web applications using Angular (v6-20), Node.js, Express, and TypeScript. Based in Bengaluru and Kolkata, serving clients worldwide at competitive, affordable low rates.",
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Global Recruiters, CTOs, Engineering Managers, Tech Founders, Startup CEOs, Enterprise Clients, Product Owners'
+    },
+    hasOccupation: {
+      '@type': 'Occupation',
+      name: 'Senior Software Engineer & Full-Stack Architect',
+      skills: 'Angular, TypeScript, RxJS, NgRx, AG Grid Enterprise, Node.js, Express, Micro Frontends, High-Performance Web Architecture',
+      occupationalCategory: '15-1252.00 - Software Developers'
+    },
     worksFor: {
       '@type': 'Organization',
       name: 'Accolite Digital',
@@ -141,30 +162,50 @@ export const SECTION_SEO_PRESETS: Record<string, Partial<SeoConfig>> = {
     title: "Rajdip Ghosh | Best Angular & Full-Stack Developer - West Bengal & Bengaluru",
     description: "Official website of Rajdip Ghosh: Senior Software Engineer & Angular Specialist. 5+ years experience building scalable enterprise systems for Morgan Stanley and DS Smith.",
     canonicalUrl: `${environment.BASE_URL}/#hero`,
-    ogUrl: `${environment.BASE_URL}/#hero`
+    ogUrl: `${environment.BASE_URL}/#hero`,
+    customTags: [
+      { name: 'audience', content: 'Global Recruiters, CTOs, Tech Founders, Hiring Managers' },
+      { name: 'subject', content: 'Senior Full-Stack & Angular Engineering Portfolio' }
+    ]
   },
   skills: {
     title: "Rajdip Ghosh Software Skills - Angular (v6-20), Node.js & Enterprise Architecture",
     description: "Explore technical competencies of Rajdip Ghosh: Angular Signals, AG Grid, Nx Monorepo, Micro Frontends, RxJS, and Node.js.",
     canonicalUrl: `${environment.BASE_URL}/#skills`,
-    ogUrl: `${environment.BASE_URL}/#skills`
+    ogUrl: `${environment.BASE_URL}/#skills`,
+    customTags: [
+      { name: 'audience', content: 'Technical Interviewers, CTOs, Engineering Leads, Tech Recruiters' },
+      { name: 'subject', content: 'Angular 20, TypeScript, AG Grid, Node.js Competencies' }
+    ]
   },
   experience: {
     title: "Rajdip Ghosh Enterprise Experience - Morgan Stanley & DS Smith",
     description: "5+ years of enterprise software engineering by Rajdip Ghosh across Morgan Stanley, DS Smith, and Xempla.",
     canonicalUrl: `${environment.BASE_URL}/#experience`,
-    ogUrl: `${environment.BASE_URL}/#experience`
+    ogUrl: `${environment.BASE_URL}/#experience`,
+    customTags: [
+      { name: 'audience', content: 'Engineering Directors, VP of Engineering, Talent Acquisition, Enterprise Clients' },
+      { name: 'subject', content: 'Morgan Stanley, DS Smith, Enterprise Architecture Track Record' }
+    ]
   },
   projects: {
     title: "Rajdip Ghosh Projects - Live Train Delay Tracker, PPM & Web Applications",
     description: "Featured software applications engineered by Rajdip Ghosh: Manifest V3 Live Train Delay Tracker, Morgan Stanley PPM, and ParceLive IoT dashboard.",
     canonicalUrl: `${environment.BASE_URL}/#projects`,
-    ogUrl: `${environment.BASE_URL}/#projects`
+    ogUrl: `${environment.BASE_URL}/#projects`,
+    customTags: [
+      { name: 'audience', content: 'Product Managers, Startup Founders, CTOs, Freelance Clients' },
+      { name: 'subject', content: 'Production Software Portfolio & Chrome Extension' }
+    ]
   },
   contact: {
     title: "Contact Rajdip Ghosh - Hire Best Software Engineer at Low Rates",
     description: "Schedule a 1:1 consultation or hire Rajdip Ghosh for senior software engineering and architecture consulting at competitive low rates.",
     canonicalUrl: `${environment.BASE_URL}/#contact`,
-    ogUrl: `${environment.BASE_URL}/#contact`
+    ogUrl: `${environment.BASE_URL}/#contact`,
+    customTags: [
+      { name: 'audience', content: 'Hiring Managers, Founders, Enterprise Clients seeking Low-Rate Top Talent' },
+      { name: 'subject', content: 'Hire Senior Software Engineer at Affordable Rates' }
+    ]
   }
 };
