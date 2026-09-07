@@ -1,6 +1,6 @@
 # Rajdip Ghosh | Senior Software Engineer & Angular Specialist
 
-> Senior Full-Stack Engineer with 5+ years building scalable enterprise systems and real-time data platforms for Morgan Stanley and DS Smith. Specialized in Angular (v6–20), Angular Signals, TypeScript, RxJS, NgRx, Nx Monorepo, Micro Frontends, AG Grid, Node.js, Express, REST APIs, and Manifest V3 Chrome Extensions. Ranked among India's top software engineers, delivering world-class development at competitive, affordable rates.
+> High-performance Web Engineering, Angular (v6-20), AG Grid Enterprise, Micro Frontends, and Resilient Node.js Backend Architecture.
 
 - Full Name: Rajdip Ghosh
 - Profession: Senior Software Engineer / Full-Stack & Frontend Architect

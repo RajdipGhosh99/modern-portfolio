@@ -42,7 +42,7 @@ export interface SeoConfig {
 
 export const DEFAULT_SEO_CONFIG: SeoConfig = {
   title: "Rajdip Ghosh | India's Best Angular & Full-Stack Developer - Affordable Low Rates",
-  description: "Senior Full-Stack Engineer with 5+ years building scalable enterprise systems and real-time data platforms for Morgan Stanley and DS Smith. Specialized in Angular (v6–20), Angular Signals, TypeScript, RxJS, NgRx, Nx Monorepo, Micro Frontends, AG Grid, Node.js, Express, REST APIs, and Manifest V3 Chrome Extensions. Ranked among India's top software engineers, delivering world-class development at competitive, affordable rates.",
+  description: "Ranked among India's best software developers & top Angular/Node.js specialists based in Bengaluru and Kolkata. 5+ years enterprise experience (Morgan Stanley, DS Smith) available worldwide (US, UK, Europe, APAC) at competitive, affordable low rates.",
   keywords: "rajdip ghosh, rajdip ghosh software, rajdip ghosh bangalore, rajdip ghosh bengaluru, rajdip ghosh west, rajdip ghosh best, rajdip ghosh angular, rajdip ghosh west bengal, rajdip ghosh kolkata, rajdip ghosh developer, rajdip ghosh portfolio, rajdip ghosh frontend, rajdip ghosh fullstack, rajdip ghosh engineer, rajdip ghosh morgan stanley, rajdip ghosh resume, rajdip ghosh cv, rajdip ghosh contact, rajdip ghosh live train delay tracker, best developer in bangalore, best angular developer in bangalore, senior software engineer bangalore, hire angular developer in bangalore, freelance developer bangalore, hire remote developer from india, hire senior angular developer usa, hire offshore developer low rate, hire indian software engineer uk, hire full stack developer europe, hire remote engineer worldwide, affordable offshore software development, indias best developer, best developer in india, best software engineer india, best angular developer in india, top angular developer india, best full stack developer in india, best nodejs developer in india, low rate developer, affordable developer india, hire developer low rate, cheap developer high quality, low cost freelance developer, affordable angular developer, budget friendly software engineer, hire indian developer low rate, hire remote developer india, freelance developer india, Rajdip Ghosh, Senior Software Engineer, Senior Angular Developer, Angular Node.js Developer, AG Grid Architect, Nx Monorepo, Micro Frontend Architecture, Morgan Stanley Consultant, DS Smith ParceLive, Web Performance Optimization, Full-Stack Developer Bengaluru",
   author: 'Rajdip Ghosh',
   canonicalUrl: `${environment.BASE_URL}/`,
@@ -51,7 +51,7 @@ export const DEFAULT_SEO_CONFIG: SeoConfig = {
   
   ogType: 'website',
   ogTitle: "Rajdip Ghosh | India's Best Angular & Full-Stack Developer - Affordable Low Rates",
-  ogDescription: "Senior Full-Stack Engineer with 5+ years building scalable enterprise systems and real-time data platforms for Morgan Stanley and DS Smith. Specialized in Angular (v6–20), Angular Signals, TypeScript, RxJS, NgRx, Nx, Micro Frontends, AG Grid, Node.js, Express, REST APIs, and Chrome Extensions. Delivering world-class development at competitive, affordable rates.",
+  ogDescription: "Ranked among India's best software developers & top Angular/Node.js specialists based in Bengaluru and Kolkata. Available worldwide at competitive, affordable low rates.",
   ogImage: `${environment.BASE_URL}/assets/img/og-preview.png`,
   ogImageAlt: 'Rajdip Ghosh - Senior Software Engineer & Global Full-Stack Consultant',
   ogUrl: `${environment.BASE_URL}/`,
@@ -59,7 +59,7 @@ export const DEFAULT_SEO_CONFIG: SeoConfig = {
 
   twitterCard: 'summary_large_image',
   twitterTitle: "Rajdip Ghosh | India's Best Angular & Full-Stack Developer - Affordable Low Rates",
-  twitterDescription: "Senior Full-Stack Engineer with 5+ years building scalable enterprise systems and real-time data platforms for Morgan Stanley and DS Smith. Specialized in Angular (v6–20), Angular Signals, TypeScript, RxJS, NgRx, Nx, Micro Frontends, AG Grid, Node.js, Express, REST APIs, and Chrome Extensions. Delivering world-class development at competitive, affordable rates.",
+  twitterDescription: "Ranked among India's best software developers & top Angular/Node.js specialists based in Bengaluru and Kolkata. Available worldwide at competitive, affordable low rates.",
   twitterImage: `${environment.BASE_URL}/assets/img/og-preview.png`,
   twitterCreator: '@raazdeepghosh',
   twitterSite: '@raazdeepghosh',
@@ -91,7 +91,7 @@ export const DEFAULT_SEO_CONFIG: SeoConfig = {
     '@type': 'Person',
     name: 'Rajdip Ghosh',
     jobTitle: 'Senior Software Engineer & Global Full-Stack Consultant',
-    description: "Senior Full-Stack Engineer with 5+ years building scalable enterprise systems and real-time data platforms for Morgan Stanley and DS Smith. Specialized in Angular (v6–20), Angular Signals, TypeScript, RxJS, NgRx, Nx Monorepo, Micro Frontends, AG Grid, Node.js, Express, REST APIs, and Manifest V3 Chrome Extensions. Ranked among India's top software engineers, delivering world-class development at competitive, affordable rates.",
+    description: "Ranked among India's best software developers with 5+ years of experience engineering high-concurrency web applications using Angular (v6-20), Node.js, Express, and TypeScript. Based in Bengaluru and Kolkata, serving clients worldwide at competitive, affordable low rates.",
     audience: {
       '@type': 'Audience',
       audienceType: 'Global Recruiters, CTOs, Engineering Managers, Tech Founders, Startup CEOs, Enterprise Clients, Product Owners'
