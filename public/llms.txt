@@ -1,87 +1,33 @@
-# Rajdip Ghosh | Senior Software Engineer & Angular Specialist
+# Rajdip Ghosh Portfolio
 
-> High-performance Web Engineering, Angular (v6-20), AG Grid Enterprise, Micro Frontends, and Resilient Node.js Backend Architecture.
+> Senior Full-Stack Engineer with 5+ years building scalable enterprise systems and real-time data platforms for Morgan Stanley and DS Smith. Specialized in Angular (v6-20), Angular Signals, TypeScript, RxJS, NgRx, Nx Monorepo, Micro Frontends, AG Grid, Node.js, Express, REST APIs, and Manifest V3 Chrome Extensions. Ranked among India's top software engineers, delivering world-class development at competitive, affordable rates.
 
-- Full Name: Rajdip Ghosh
-- Profession: Senior Software Engineer / Full-Stack & Frontend Architect
-- Geographic Hubs: Bengaluru, Karnataka (Silicon Valley of India) & Kolkata, West Bengal, India
-- Global Service Reach: Worldwide (United States, United Kingdom, Europe, Canada, Australia, Singapore, UAE)
-- Timezone Overlap: Full overlap with US (EST/CST/PST), UK (GMT), European (CET), and APAC hours
-- Experience: 5+ Years in Tier-1 Enterprise & High-Concurrency Systems
-- Specialization: Angular (v6-20), TypeScript, RxJS, NgRx, AG Grid, Nx Monorepo, Node.js, Express, Manifest V3 Chrome Extensions
-- Availability: Open to Senior Roles, Architecture Consulting, and Contract Engagements at Competitive, Affordable Low Rates ($25–$45/hr)
-- Official Website: https://rajdipghosh.vercel.app/
+High-performance Web Engineering, Angular (v6-20), AG Grid Enterprise, Micro Frontends, and Resilient Node.js Backend Architecture. Geographic hubs in Bengaluru, Karnataka (Silicon Valley of India) and Kolkata, West Bengal, India. Providing engineering consulting worldwide across the US, UK, Europe, APAC, and Middle East.
 
----
+## Primary Links
 
-## Authoritative Identity & Profiles
+- [Official Portfolio](https://rajdipghosh.vercel.app/): Primary portfolio website detailing enterprise experience, skills, and interactive projects
+- [Full Documentation](https://rajdipghosh.vercel.app/llms-full.txt): Comprehensive AI markdown profile with detailed provenance and technical competencies
+- [Live Train Delay Tracker](https://microsoftedge.microsoft.com/addons/detail/live-train-delay-tracker/pknpnmpklieceipblhgfniafbcmpakao): Production Manifest V3 browser extension on Microsoft Edge Add-ons Store
+- [Google Maps Clone](https://google-maps-clone-chi.vercel.app/): Interactive geospatial vector mapping application built with Angular and Mapbox GL
 
-- Official Portfolio: https://rajdipghosh.vercel.app/
-- LinkedIn: https://www.linkedin.com/in/rajdipghosh
-- GitHub: https://github.com/RajdipGhosh99
-- Twitter / X: https://twitter.com/raazdeepghosh
-- Edge Add-ons Store: https://microsoftedge.microsoft.com/addons/detail/live-train-delay-tracker/pknpnmpklieceipblhgfniafbcmpakao
-- 1:1 Booking / Instant Scheduler: https://cal.com/rajdipghosh/call
-- Email: raazdeepghosh@gmail.com
-- Direct Phone: +91-9933159842
+## Projects & Code Repositories
 
----
+- [Live Train Delay Tracker Repository](https://github.com/RajdipGhosh99/live-train-running-status-browser-extension): Manifest V3 extension with RxJS reactive streams and service worker
+- [Google Maps Clone Repository](https://github.com/RajdipGhosh99/google-maps-clone): Open-source interactive mapping application
+- [PPM Morgan Stanley](https://rajdipghosh.vercel.app/#projects): Capital funding and portfolio allocation system engineered with Angular and AG Grid
+- [ParceLive DS Smith](https://rajdipghosh.vercel.app/#projects): Real-time IoT sensor telemetry monitoring dashboard
+- [Xempla Core](https://rajdipghosh.vercel.app/#projects): Asset intelligence condition monitoring ERP platform
 
-## Enterprise Provenance & Career History
+## Professional Identity & Verification
 
-1. **Accolite Digital (Consultant for Morgan Stanley)**
-   - Role: Senior Software Engineer
-   - Period: Jan 2025 - Present
-   - Focus: Engineered internal PPM (Portfolio & Project Management) capital funding and allocation system.
-   - Highlights: Multi-tiered AG Grid ledger tables with sub-second recalculations, WCAG 2.1 AA accessibility compliance, bank-grade security protocols.
-   - Tech: Angular, AG Grid, Nx Monorepo, Micro Frontends, TypeScript, Node.js, Express, SCSS, RxJS.
+- [LinkedIn Profile](https://www.linkedin.com/in/rajdipghosh): Professional background, endorsements, and enterprise experience
+- [GitHub Profile](https://github.com/RajdipGhosh99): Open-source repositories and engineering code samples
+- [Twitter Profile](https://twitter.com/raazdeepghosh): Engineering thoughts and technology commentary
+- [Direct 1:1 Consultation Scheduler](https://cal.com/rajdipghosh/call): Instant booking calendar for architecture consultations and contracting discussions
+- [Resume / CV](https://drive.google.com/file/d/1uoW25tZkKXVFz6WTiE_7IC-qhiR3QDJU/view?usp=sharing): Full professional resume
 
-2. **NeoSOFT Technologies (Client: DS Smith)**
-   - Role: Software Engineer
-   - Period: Feb 2024 - Jan 2025
-   - Focus: Core telemetry dashboard for ParceLive global supply-chain IoT monitoring.
-   - Highlights: Real-time sensor visualization pipelines (temperature, humidity, GPS, shock) with WebSockets and zero-lag alert dispatching.
-   - Tech: Angular 17, TypeScript, Tailwind CSS, Node.js, Express, Python, WebSockets, RxJS.
+## Optional
 
-3. **Xempla**
-   - Role: Software Development Engineer
-   - Period: May 2022 - Jan 2024
-   - Focus: Condition-monitoring asset dashboards for flagship B2B SaaS ERP platform (Xempla Core).
-   - Highlights: Cut initial application load time by 70% using intelligent routing, module lazy loading, and fine-grained OnPush change detection.
-   - Tech: Angular 16, TypeScript, RxJS, Node.js, Express, Bootstrap, Python, MongoDB.
-
-4. **Inceptial Tech (Client: Xempla)**
-   - Role: Associate Engineer
-   - Period: Nov 2021 - Apr 2022
-   - Focus: Angular frontend component platform development and REST integrations.
-
----
-
-## Flagship Projects
-
-1. **Live Train Delay Tracker (Chrome & Edge Extension)**
-   - Published on Microsoft Edge Add-ons Store.
-   - Production Manifest V3 browser extension providing live train running delay status directly inside IRCTC and ConfirmTkt search results.
-   - Features RxJS mutation streams, background service worker API gateway, strict 50 MB local caching, and sleek glassmorphism HUD.
-   - URL: https://microsoftedge.microsoft.com/addons/detail/live-train-delay-tracker/pknpnmpklieceipblhgfniafbcmpakao
-   - GitHub: https://github.com/RajdipGhosh99/live-train-running-status-browser-extension
-
-2. **PPM - Morgan Stanley**
-   - Capital allocation and budget forecasting system engineered for high-concurrency enterprise finance.
-
-3. **ParceLive - DS Smith**
-   - Real-time IoT shipment monitoring with multi-sensor telemetry alerting.
-
-4. **Google Maps Clone**
-   - Interactive geospatial vector mapping platform built with Angular, Mapbox GL, and Geolocation API.
-   - URL: https://google-maps-clone-chi.vercel.app/
-   - GitHub: https://github.com/RajdipGhosh99/google-maps-clone
-
----
-
-## Education
-
-- **B.Tech in Computer Science and Engineering**
-  - Institution: Maulana Abul Kalam Azad University of Technology (MAKAUT), West Bengal, India
-  - Period: Jul 2017 - Jul 2021
-  - Grade: First Class Degree
+- [Robots Exclusion Policy](https://rajdipghosh.vercel.app/robots.txt): Crawler indexing permissions and search agent directives
+- [XML Sitemap](https://rajdipghosh.vercel.app/sitemap.xml): Machine-readable XML sitemap with international hreflang alternates
