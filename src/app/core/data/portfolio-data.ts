@@ -258,7 +258,8 @@ export const EDUCATION_LIST: Education[] = [
   {
     id: 'makaut',
     degree: 'B.Tech in Computer Science and Engineering',
-    institution: 'Maulana Abul Kalam Azad University of Technology (MAKAUT)',
+    institution: 'Maulana Abul Kalam Azad University of Technology (MAKAUT), West Bengal',
+    location: 'Kolkata, West Bengal, India',
     period: 'Jul 2017 - Jul 2021',
     grade: 'First Class Degree',
     highlights: [

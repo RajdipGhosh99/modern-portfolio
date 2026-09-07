@@ -2,15 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Primary Authority Domain: Rajdip Ghosh Official Portfolio -->
   <url>
     <loc>https://rajdipghosh.vercel.app/</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://rajdipghosh.vercel.app/assets/img/rajdip-avatar.png</image:loc>
-      <image:title>Rajdip Ghosh - India's Best Angular &amp; Full-Stack Developer</image:title>
-      <image:caption>Rajdip Ghosh Portfolio Picture</image:caption>
+      <image:loc>https://rajdipghosh.vercel.app/assets/img/rajdip-avatar.webp</image:loc>
+      <image:title>Rajdip Ghosh - Senior Software Engineer &amp; Top Angular Developer India</image:title>
+      <image:caption>Official portrait of Rajdip Ghosh, Senior Software Engineer based in West Bengal and Bengaluru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://rajdipghosh.vercel.app/assets/img/portfolio/chrome-extension.webp</image:loc>
+      <image:title>Live Train Delay Tracker - Chrome Extension by Rajdip Ghosh</image:title>
+      <image:caption>Manifest V3 browser extension and real-time Indian Railways running status tracker</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://rajdipghosh.vercel.app/assets/img/portfolio/meter.webp</image:loc>
+      <image:title>PPM Morgan Stanley - Capital Management Platform by Rajdip Ghosh</image:title>
+      <image:caption>Enterprise financial funding and ledger platform built with Angular and AG Grid</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://rajdipghosh.vercel.app/assets/img/portfolio/radial-bar.webp</image:loc>
+      <image:title>ParceLive DS Smith - Telemetry Dashboard by Rajdip Ghosh</image:title>
+      <image:caption>Real-time IoT shipment monitoring and sensor telemetry dashboard</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://rajdipghosh.vercel.app/assets/img/portfolio/linear-bar.webp</image:loc>
+      <image:title>Xempla Core - B2B SaaS ERP Asset Intelligence by Rajdip Ghosh</image:title>
+      <image:caption>Asset intelligence condition monitoring ERP platform</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://rajdipghosh.vercel.app/assets/img/portfolio/gmap-clone.webp</image:loc>
+      <image:title>Google Maps Clone - Geospatial Map by Rajdip Ghosh</image:title>
+      <image:caption>Interactive vector mapping platform with Angular and Mapbox GL</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://rajdipghosh.vercel.app/assets/img/portfolio/instaclone.webp</image:loc>
+      <image:title>Finstagran - Photo Feed Web Application by Rajdip Ghosh</image:title>
+      <image:caption>Modern social media photo feed web app built with Angular and Firebase</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://rajdipghosh.vercel.app/assets/img/portfolio/studentcdc.webp</image:loc>
+      <image:title>Portfolio V1 - Developer Showcase by Rajdip Ghosh</image:title>
+      <image:caption>Developer portfolio iteration by Rajdip Ghosh</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://rajdipghosh.vercel.app/assets/img/portfolio/stopwatch.webp</image:loc>
+      <image:title>Analytics &amp; Telemetry Dashboard by Rajdip Ghosh</image:title>
+      <image:caption>Enterprise high-density data views and charting component library</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://rajdipghosh.vercel.app/assets/img/og-preview.png</image:loc>
+      <image:title>Rajdip Ghosh Portfolio Preview Card</image:title>
+      <image:caption>Social preview banner for Rajdip Ghosh Senior Software Engineer</image:caption>
     </image:image>
   </url>
+
+  <!-- Deep Section Anchors for Instant Query Matching -->
+  <url>
+    <loc>https://rajdipghosh.vercel.app/#hero</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://rajdipghosh.vercel.app/#skills</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://rajdipghosh.vercel.app/#experience</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://rajdipghosh.vercel.app/#projects</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://rajdipghosh.vercel.app/#contact</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Machine-Readable LLM Specification for AI Agents -->
+  <url>
+    <loc>https://rajdipghosh.vercel.app/llms.txt</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

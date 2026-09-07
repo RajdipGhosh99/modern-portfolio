@@ -43,7 +43,7 @@ export interface SeoConfig {
 export const DEFAULT_SEO_CONFIG: SeoConfig = {
   title: "Rajdip Ghosh | India's Best Angular & Full-Stack Developer - Affordable Low Rates",
   description: "Ranked among India's best software developers & top Angular/Node.js specialists. 5+ years enterprise experience (Morgan Stanley, DS Smith) available at competitive, affordable low rates for freelance consulting, contract, and full-stack engineering.",
-  keywords: "indias best developer, best developer in india, best software engineer india, best angular developer in india, top angular developer india, best full stack developer in india, best nodejs developer in india, low rate developer, affordable developer india, hire developer low rate, cheap developer high quality, low cost freelance developer, affordable angular developer, budget friendly software engineer, hire indian developer low rate, hire remote developer india, freelance developer india, Rajdip Ghosh, Senior Software Engineer, Senior Angular Developer, Angular Node.js Developer, AG Grid Architect, Nx Monorepo, Micro Frontend Architecture, Morgan Stanley Consultant, DS Smith ParceLive, Web Performance Optimization, Full-Stack Developer Bengaluru",
+  keywords: "rajdip ghosh, rajdip ghosh software, rajdip ghosh west, rajdip ghosh best, rajdip ghosh angular, rajdip ghosh west bengal, rajdip ghosh kolkata, rajdip ghosh developer, rajdip ghosh portfolio, rajdip ghosh frontend, rajdip ghosh fullstack, rajdip ghosh engineer, rajdip ghosh morgan stanley, rajdip ghosh resume, rajdip ghosh cv, rajdip ghosh contact, rajdip ghosh live train delay tracker, indias best developer, best developer in india, best software engineer india, best angular developer in india, top angular developer india, best full stack developer in india, best nodejs developer in india, low rate developer, affordable developer india, hire developer low rate, cheap developer high quality, low cost freelance developer, affordable angular developer, budget friendly software engineer, hire indian developer low rate, hire remote developer india, freelance developer india, Rajdip Ghosh, Senior Software Engineer, Senior Angular Developer, Angular Node.js Developer, AG Grid Architect, Nx Monorepo, Micro Frontend Architecture, Morgan Stanley Consultant, DS Smith ParceLive, Web Performance Optimization, Full-Stack Developer Bengaluru",
   author: 'Rajdip Ghosh',
   canonicalUrl: `${environment.BASE_URL}/`,
   robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
@@ -91,9 +91,11 @@ export const DEFAULT_SEO_CONFIG: SeoConfig = {
     sameAs: [
       'https://www.linkedin.com/in/rajdipghosh',
       'https://github.com/RajdipGhosh99',
-      'https://twitter.com/raazdeepghosh'
+      'https://twitter.com/raazdeepghosh',
+      'https://cal.com/rajdipghosh/call'
     ],
     knowsAbout: [
+      'Software Engineering',
       'Angular (v6-20)',
       'Angular Signals',
       'AG Grid Enterprise',
@@ -109,44 +111,49 @@ export const DEFAULT_SEO_CONFIG: SeoConfig = {
       'Web Performance & Web Vitals Optimization',
       'Affordable Web Development',
       'Enterprise Consulting at Low Rates',
+      'West Bengal Tech Ecosystem',
       'WCAG 2.1 AA Accessibility',
       'Jasmine & Karma Testing'
     ],
+    homeLocation: {
+      '@type': 'Place',
+      name: 'Kolkata, West Bengal, India'
+    },
     alumniOf: {
       '@type': 'CollegeOrUniversity',
-      name: 'Maulana Abul Kalam Azad University of Technology (MAKAUT)'
+      name: 'Maulana Abul Kalam Azad University of Technology (MAKAUT), West Bengal, India'
     }
   }
 };
 
 export const SECTION_SEO_PRESETS: Record<string, Partial<SeoConfig>> = {
   hero: {
-    title: 'Rajdip Ghosh | Senior Software Engineer & Angular Specialist',
-    description: 'Senior Software Engineer with 5+ years building scalable, high-performance web systems using Angular, RxJS, and Node.js. Consultant for Morgan Stanley.',
+    title: "Rajdip Ghosh | Best Angular & Full-Stack Developer - West Bengal & Bengaluru",
+    description: "Official website of Rajdip Ghosh: Senior Software Engineer & Angular Specialist. 5+ years experience building scalable enterprise systems for Morgan Stanley and DS Smith.",
     canonicalUrl: `${environment.BASE_URL}/#hero`,
     ogUrl: `${environment.BASE_URL}/#hero`
   },
   skills: {
-    title: 'Technical Ecosystem - Angular (v6-20), Node.js & Reactive Streams | Rajdip Ghosh',
-    description: 'Explore 30 battle-tested technologies: Angular (v6-20), Signals, AG Grid, Nx Monorepo, Micro Frontends, RxJS Pipelines, NgRx, Node.js, and AI workflows.',
+    title: "Rajdip Ghosh Software Skills - Angular (v6-20), Node.js & Enterprise Architecture",
+    description: "Explore technical competencies of Rajdip Ghosh: Angular Signals, AG Grid, Nx Monorepo, Micro Frontends, RxJS, and Node.js.",
     canonicalUrl: `${environment.BASE_URL}/#skills`,
     ogUrl: `${environment.BASE_URL}/#skills`
   },
   experience: {
-    title: 'Enterprise Experience - Morgan Stanley & DS Smith | Rajdip Ghosh',
-    description: '5 years of enterprise engineering across Morgan Stanley, DS Smith, and Xempla. Deep expertise in high-concurrency funding & logistics systems.',
+    title: "Rajdip Ghosh Enterprise Experience - Morgan Stanley & DS Smith",
+    description: "5+ years of enterprise software engineering by Rajdip Ghosh across Morgan Stanley, DS Smith, and Xempla.",
     canonicalUrl: `${environment.BASE_URL}/#experience`,
     ogUrl: `${environment.BASE_URL}/#experience`
   },
   projects: {
-    title: 'Featured Systems - FinTech & Full-Stack Platforms | Rajdip Ghosh',
-    description: 'Showcase of enterprise client systems including Morgan Stanley Internal Funding Management, DS Smith ParceLive telemetry, and geospatial applications.',
+    title: "Rajdip Ghosh Projects - Live Train Delay Tracker, PPM & Web Applications",
+    description: "Featured software applications engineered by Rajdip Ghosh: Manifest V3 Live Train Delay Tracker, Morgan Stanley PPM, and ParceLive IoT dashboard.",
     canonicalUrl: `${environment.BASE_URL}/#projects`,
     ogUrl: `${environment.BASE_URL}/#projects`
   },
   contact: {
-    title: 'Connect & Book 1:1 Call | Rajdip Ghosh - Senior Software Engineer',
-    description: 'Schedule a 1-on-1 intro discussion with Rajdip Ghosh regarding senior software engineering roles, enterprise architecture, or technical consulting.',
+    title: "Contact Rajdip Ghosh - Hire Best Software Engineer at Low Rates",
+    description: "Schedule a 1:1 consultation or hire Rajdip Ghosh for senior software engineering and architecture consulting at competitive low rates.",
     canonicalUrl: `${environment.BASE_URL}/#contact`,
     ogUrl: `${environment.BASE_URL}/#contact`
   }

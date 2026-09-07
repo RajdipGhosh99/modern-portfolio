@@ -1,4 +1,32 @@
-# Robots.txt for Rajdip Ghosh Portfolio
+# Robots.txt for Rajdip Ghosh Portfolio & AI Search Agents
 User-agent: *
 Allow: /
+
+# Dedicated AI Search & Retrieval Agents
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Authority Sitemaps & Machine Standards
 Sitemap: https://rajdipghosh.vercel.app/sitemap.xml
+LLMs-Txt: https://rajdipghosh.vercel.app/llms.txt
